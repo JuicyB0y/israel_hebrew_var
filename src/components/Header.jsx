@@ -66,9 +66,9 @@ const Header = ({ setOpened, opened }) => {
     <div className={`${styles.wrapper} ${theme === 'reversed' ? styles.wrapper_reversed : ''}`}>
       <div className={`${styles.first__section} ${theme === 'reversed' ? styles.first__section_reversed : ''}`}>
         <div className={styles.bar__bigwrapper}>
-          <div className={styles.flags}>
+          {/* <div className={styles.flags}>
             <LanguageFlags />
-          </div>
+          </div> */}
           <div onClick={handleClick} className={styles.bar__wrapper}>
             <div className={`${opened ? styles.change1 : ''} ${styles.bar1}`}></div>
             <div className={`${opened ? styles.change2 : ''} ${styles.bar2}`}></div>
@@ -93,7 +93,7 @@ const Header = ({ setOpened, opened }) => {
         <a href="#" className={`${styles.button} ${theme === 'reversed' ? styles.button_reversed : ''}`}>
           {t('header_client')}
         </a>
-        <LanguageFlags />
+        {/* <LanguageFlags /> */}
       </div>
     </div>
   );
