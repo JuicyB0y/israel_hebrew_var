@@ -34,7 +34,7 @@
 .top {
   padding: 10px 30px;
   display: flex;
-  flex-direction: var(--theme-default-popup); /* row */
+  flex-direction: row-reverse;
   align-items: center;
   &_closeIcon {
     width: 25px;
@@ -46,11 +46,9 @@
   }
 
   &_logo {
-    margin-left: var(--theme-default-popupMargin50); /* 50px / 0 */
+    margin-right: 50px;
     display: flex;
     align-items: center;
-    flex-direction: var(--theme-default-popup); /* row/row-reversed */
-    margin-right: var(--theme-default-popupMargin0); /* 0 / 50px */
 
     a {
       font-size: 25px;
@@ -65,12 +63,12 @@
 
 .middle {
   display: flex;
-  justify-content: var(--theme-default-popupJustifyC); /* space-between, space-around */
-  flex-direction: var(--theme-default-popup); /* row / row-reverse */
+  justify-content: space-between;
+  flex-direction: row-reverse;
 
   &_top {
     display: none;
-    margin-left: 60px;
+    margin-left: 10px;
   }
 
   &_top :global(a.active) {
@@ -95,15 +93,16 @@
   }
 
   &_left {
-    margin-left: 60px;
+    margin-right: 150px;
     font-size: 22px;
     font-weight: 600;
-    text-align: var(--theme-default-popupTextAi); /* left / right */
+    text-align: right;
 
     & a {
       margin-top: 7px;
       color: #000;
       display: block;
+      direction: rtl;
     }
   }
 
@@ -117,8 +116,8 @@
   }
 
   &_right {
-    text-align: var(--theme-default-popupTextAi);
-    margin-right: 150px;
+    text-align: right;
+    margin-left: 60px;
     margin-top: 7px;
   }
 
@@ -148,6 +147,7 @@
 .button {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-top: 10px;
   padding: 10px 18px;
   background-color: #000;
@@ -231,6 +231,7 @@
 
     &_top {
       display: flex;
+      justify-content: flex-end;
     }
 
     &_services {
@@ -244,8 +245,40 @@
       display: none;
     }
 
+    &_left {
+      margin-right: 60px;
+    }
+
     &_center {
       margin: 10px 0 0 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .top {
+    padding: 10px 25px;
+    a {
+      font-size: 18px;
+    }
+
+    &_logo {
+      margin-right: 10px;
+    }
+  }
+
+  .middle {
+    // &_top {
+    //   font-size: 20px;
+    // }
+
+    &_services {
+      margin: 0 20px 10px 0;
+      font-size: 20px;
+    }
+
+    hr {
+      margin: 0 20px 20px 20px;
     }
   }
 }

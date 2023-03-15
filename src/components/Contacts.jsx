@@ -14,7 +14,7 @@ const Contacts = () => {
   return (
     <div className={styles.form__wrapper}>
       <div className={styles.form__element}>
-        <h4 className={styles.form__contact}>{t('form_contact')}</h4>
+        <h4 className={styles.form__contact}>צור קשר</h4>
         <div className={styles.form__discuss}>{t('form_discuss')}</div>
         <div className={styles.form__email}>Jerusalem@mail.ru</div>
         <div className={styles.form__phone}>+7 (932) 213-45-63</div>

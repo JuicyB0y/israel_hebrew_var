@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
+import axios from 'axios';
 
 import styles from './FormTab3.module.scss';
 
@@ -45,6 +46,18 @@ const FormTab3 = () => {
             setFormStatus('');
           }, 4000);
         });
+
+        // код Артёма
+        let fData = new FormData();
+
+        fData.append('name', values.name);
+        fData.append('company', values.company);
+        fData.append('email', values.email);
+        fData.append('number', values.number);
+        fData.append('text', values.text);
+
+        axios.post('http://localhost/israel_project-main/src/php/form3-db.php', fData);
+        //
       } catch (error) {
         console.log(error);
         setFormStatus('failure');
@@ -63,7 +76,7 @@ const FormTab3 = () => {
             className={styles.input}
             name="name"
             required
-            placeholder={t('form_name1')}
+            placeholder="חברה"
             type="text"
             value={formik.values.name}
             onChange={formik.handleChange}
@@ -76,7 +89,7 @@ const FormTab3 = () => {
             className={styles.input}
             name="company"
             required
-            placeholder={t('form_label3')}
+            placeholder="שם"
             type="text"
             value={formik.values.company}
             onChange={formik.handleChange}
@@ -94,7 +107,7 @@ const FormTab3 = () => {
             className={styles.input}
             name="email"
             required
-            placeholder={t('form_email')}
+            placeholder="טלפון"
             type="email"
             value={formik.values.email}
             onChange={formik.handleChange}
@@ -109,7 +122,7 @@ const FormTab3 = () => {
             className={styles.input}
             name="number"
             required
-            placeholder={t('form_label4')}
+            placeholder="דוא”ל"
             type="number"
             value={formik.values.number}
             onChange={formik.handleChange}
@@ -122,12 +135,12 @@ const FormTab3 = () => {
       </div>
 
       <div className={styles.textarea__wrapper}>
-        <label htmlFor="text">{t('form_label5')}</label>
+        <label htmlFor="text">הצעה</label>
         <textarea
           className={styles.textarea}
           name="text"
           id="text"
-          placeholder={t('form_label6')}
+          placeholder="מה יש לך להציע?"
           value={formik.values.text}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}

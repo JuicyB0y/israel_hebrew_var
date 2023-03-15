@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import ReactPlayer from 'react-player';
 
 import Form from '../components/Form';
@@ -17,14 +16,12 @@ import startup_5 from '../assets/startup_5.png';
 // import BitSugar_video from '../assets/BitSugar_video.mp4';
 
 const Startup = () => {
-  const { t } = useTranslation();
-
   return (
     <div className={styles.wrapper}>
       <section className={styles.topSection}>
         <div className={styles.image}>
           <img src={headerImg} alt="bgImage" /* className={styles.image} */ />
-          <h1>{t('startup_header')}</h1>
+          <h1>פרה-רול אנימציה עבור סטארט-אפ של מטבעות קריפטוגרפיים</h1>
         </div>
         <div className={styles.article}>
           <div className={styles.icons}>
@@ -41,13 +38,19 @@ const Startup = () => {
         </div>
       </section>
       <section className={styles.description}>
-        <div className={styles.subheader}>{t('sturm_subtitle')}</div>
-        <p>{t('startup_taskText')}</p>
+        <div className={styles.subheader}>משימה</div>
+        <p>
+          לייצר סרטון אנימציה לפרסום השירות העיקרי של החברה - הלוואות בכסף אמיתי כנגד מטבעות קריפטו באינטרנט. הלקוח ביקש
+          לפתח קונספט קל להבנה ולהסביר בפשטות איך זה עובד.
+        </p>
 
-        <div className={styles.subheader}>{t('startup_solut')}</div>
-        <p>{t('startup_solutText')}</p>
+        <div className={styles.subheader}>פתרון</div>
+        <p>
+          הסיפור מבוסס על סיטואציה קומית שבה הגזימו בבעיית המחסור בכספים מחוסלים , והחליטו להשתמש בדמויות של חתולים
+          מצוירים במקום אנשים אמיתיים - זה עזר למשוך את תשומת הלב של הצופה והוסיף הומור.
+        </p>
 
-        <div className={styles.subheader}>{t('startup_ill')}</div>
+        <div className={styles.subheader}>איורים</div>
         <div className={styles.wrapper3d}>
           <img src={startup_0} alt="startup_0" />
           <img src={startup_1} alt="startup_1" />
@@ -57,7 +60,7 @@ const Startup = () => {
           <img src={startup_5} alt="startup_5" />
         </div>
 
-        <div className={styles.subheader}>{t('servPage_result')}</div>
+        <div className={styles.subheader}>תוצאה</div>
         <div className={styles.videoWrapper}>
           <ReactPlayer
             url="https://vimeo.com/282304621"
@@ -66,7 +69,7 @@ const Startup = () => {
             // controls
             config={{
               vimeo: {
-                playerOptions: { byline: true, controls: true },
+                playerOptions: { byline: true, controls: true, playsinline: false, iframeParams: { fullscreen: 0 } },
               },
             }}
             className={styles.video}

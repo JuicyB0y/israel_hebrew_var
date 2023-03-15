@@ -32,11 +32,11 @@ const Interior = () => {
         </div>
       </section>
       <section className={styles.description}>
-        <h3>{t('sturm_subtitle')}</h3>
+        <h3>משימה</h3>
         <article>
-          {t('interior_task1')}
+          בפרויקט זה, הלקוח רצה לעצב את הסלון שלו וביקש להשתמש בצבע ירוק מרגיע , אור חם ומזמין. האזור מיועד למטרות פנאי
           <br /> <br />
-          {t('interior_task2')}
+          .כמו כן היה גם חשוב להשתמש בחומרים אורגניים ובצמחים חיים
         </article>
         <div className={styles.taskImg_wrapper}>
           <img src={taskImg} alt="graffiti" />

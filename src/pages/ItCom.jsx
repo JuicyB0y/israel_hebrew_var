@@ -23,7 +23,9 @@ const ItCom = () => {
       <section className={styles.topSection}>
         <div className={styles.image}>
           <img src={headerImg} alt="bgImage" /* className={styles.image} */ />
-          <h1>{t('intis_header')}</h1>
+          <h1>
+            Intis <br /> זה סרטון על עבודת IT.COM
+          </h1>
         </div>
         <div className={styles.article}>
           <div className={styles.icons}>
@@ -40,32 +42,40 @@ const ItCom = () => {
         </div>
       </section>
       <section className={styles.description}>
-        <div className={styles.subheader}>{t('video_task')}</div>
+        <div className={styles.subheader}>משימה</div>
         <p>
-          {t('intis_text1')}
+          לספר על היתרונות של רכישת דומיינים ברמה שלישית באזור it.com (שמות פורמט yourdomain.it.com) באמצעות אנימציה.
+          הסרטון צריך להיות ברור, מודרני וטכנולוגי.
           <br />
           <br />
-          {t('intis_text2')}
+          הקהל העיקרי של החברה הוא יזמים הפועלים בשווקים גדולים: הודו, סין, אירופה. לכל מדינה ואזור יש קהל יעד שונה,
+          ולכן לא ניתן ליצור אותו יחס כלפי המותג.
         </p>
 
-        <div className={styles.subheader}>{t('intis_idea')}</div>
+        <div className={styles.subheader}>רעיון</div>
         <p>
-          {t('intis_idea_text1')}
+          מבוסס על העובדה שלכל הלקוחות הפוטנציאליים יש חוסר אמון בחברה וחוסר הבנה של מה שהיא עושה. עבור כל הקהלים, יש
+          בעיה נפוצה עם אמון בעת ​​רכישת שמות דומיין באתרים לא ברורים.
           <br />
           <br />
-          {t('intis_idea_text2')}
+          בכניסה לשוק הבינלאומי, עסקים מתמודדים עם הצורך להעביר את האתר שלהם לדומיין *.com. אבל כל התחומים כבר עמוסים או
+          יקרים מדי . לכן הדומיין *.it.com אידיאלי לכניסה לשוק הבינלאומי, כתוספת לאתר הראשי. בנוסף, לשימוש באזור תחום זה
+          יש יתרונות ברורים:
         </p>
 
         <ul className={styles.list}>
-          <li> — {t('intis_list1')}</li>
-          <li> — {t('intis_list2')}</li>
-          <li> — {t('intis_list3')}</li>
+          <li>— מגוון שמות יפים במחיר סביר </li>
+          <li>— אפשרות להשתמש במיתוג עם המילה it (do.it.com, buy.it.com וכו') </li>
+          <li>— אפשרות להשתמש במיתוג עם המילה </li>
         </ul>
 
-        <div className={styles.subheader}>{t('intis_style')}</div>
-        <p>{t('intis_style1')}</p>
+        <div className={styles.subheader}>סגנון</div>
+        <p>
+          הפרסומת חייבת להיות מובנת לחלוטין לכל יזם מכל מדינה. זה יכול להיות יצרן מוצרי נייר באיטליה, בעל קונדיטוריה
+          באפריקה, או סטארט-אפ צעיר מרוסיה. עבור כולם, הפעולות המתרחשות על המסך צריכות להיות ברורות באותה מידה, ולכן
+          דחינו מטאפורות והפשטות רב-שכבתיות. השתמשנו בסגנון איור שטוח ואנימציית צורות.
+        </p>
 
-        <div className={styles.subheader}>{t('korona_3d')}</div>
         <div className={styles.wrapper3d}>
           <img src={itCom_1} alt="itCom_1" />
           <img src={itCom_2} alt="itCom_2" />
@@ -74,7 +84,7 @@ const ItCom = () => {
           <img src={itCom_5} alt="itCom_5" />
         </div>
 
-        <div className={styles.subheader}>{t('servPage_result')}</div>
+        <div className={styles.subheader}>תוצאה</div>
         <div className={styles.videoWrapper}>
           <ReactPlayer
             url="https://vimeo.com/696922670"
@@ -83,7 +93,7 @@ const ItCom = () => {
             // controls
             config={{
               vimeo: {
-                playerOptions: { byline: true, controls: true },
+                playerOptions: { byline: true, controls: true, playsinline: false, iframeParams: { fullscreen: 0 } },
               },
             }}
             className={styles.video}

@@ -17,7 +17,7 @@ const ArtObject = () => {
       <section className={styles.topSection}>
         <div className={styles.image}>
           <img src={headerImg} alt="bgImage" /* className={styles.image} */ />
-          <h1>{t('art_header')}</h1>
+          <h1>אזור אמנותי</h1>
         </div>
         <div className={styles.article}>
           <div className={styles.icons}>
@@ -34,22 +34,19 @@ const ArtObject = () => {
         </div>
       </section>
       <section className={styles.description}>
-        <h3>{t('art_subheader')}</h3>
+        <h3>חפץ אמנות ועיצוב נוף של השטח ליד הכיכר</h3>
         <article>
-          {t('art_text1')}
+          חפץ האמנות זה מוקדש לתחנת השאיבה Alekseevskaya בשכונת Alekseevsky במוסקבה.
           <br /> <br />
-          {t('art_text2')}
-          <br /> <br />
-          {t('art_text3')}
+          תחנה זו היא אחת הבניינים הבודדים של רוסיה ששרדו עוד מלפני המהפכה באזור. <br /> <br />
+          האובייקט נועד לאחד את התושבים המקומיים של האזור ולהסב את תשומת הלב לבעיית היעלמות של מונומנטים אדריכליים.
         </article>
-
-        <article>{t('art_text4')}</article>
       </section>
       <section className={styles.imgExamples}>
         <img src={art1} alt="art1" />
         <img src={art2} alt="art2" />
       </section>
-      <h3 className={styles.imgExamples_name}>{t('art_design')}</h3>
+      <h3 className={styles.imgExamples_name}>עיצוב</h3>
       <article className={styles.imgExamples_text}>{t('art_designText')}</article>
       <div className={styles.form}>
         <Form />

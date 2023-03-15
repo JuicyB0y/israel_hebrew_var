@@ -31,7 +31,7 @@ const Nexign = () => {
       <section className={styles.topSection}>
         <div className={styles.image}>
           <img src={headerImg} alt="bgImage" /* className={styles.image} */ />
-          <h1>{t('nexign_header')}</h1>
+          <h1>סדרה של פרומואים עבור Nexign</h1>
         </div>
         <div className={styles.article}>
           <div className={styles.icons}>
@@ -48,45 +48,61 @@ const Nexign = () => {
         </div>
       </section>
       <section className={styles.description}>
-        <div className={styles.subheader}>{t('video_task')}</div>
+        <div className={styles.subheader}>משימה</div>
         <div className={styles.taskWrapper}>
           <p>
-            {t('nexign_taskText1')}
+            להכין סדרת סרטונים להשתתפותה של Nexign בפורום הבינלאומי Digital Transformation World Series 2020: 3 סרטוני
+            הדגמה על מוצרי הלקוח וסרטון בן 30 שניות, שיוצג באירוע בהפסקות בין הפגישות.
             <br />
             <br />
-            {t('nexign_taskText2')}
+            המשימה הייתה מסובכת בדד-ליין קצר - היו לנו רק 1.5 חודשים לייצר את הפרויקט, וזה היה הניסיון הראשון שלנו עם
+            מחלקת השיווק של Nexign.
           </p>
 
           <aside>
-            <div>{t('nexign_aside')}</div>
+            <div>
+              NEXIGN <br />
+              הוא ספק מוביל של מערכות תמיכה לעסקים ופלטפורמות אינטרנט עבור ספקי שירותים.
+            </div>
           </aside>
         </div>
 
-        <div className={styles.subheader}>{t('startup_solut')}</div>
-        <p>{t('nexign_solutText1')}</p>
-        <p className={styles.quote}>{t('nexign_solutText2')}</p>
-        <p>{t('nexign_solutText3')}</p>
+        <div className={styles.subheader}>פתרון</div>
+        <p>הקונספט של הסרטון נקבע על ידי הלקוח בחוזה</p>
+        <p className={styles.quote}>
+          “ The synthesis of graphics and emotional stock videos where the graphics is prevailing to support the idea of
+          data-driven company. ”
+        </p>
+        <p>
+          השתמשנו בשילוב של גרפיקה מונפשת וצילומי מדה. האנימציות עזרו להמחיש את המשמעות של המוצרים של Nexign, היתרונות
+          שלהם ונתונים אחרים, וקטעי וידאו הוסיפו את הרגש הנכון לסרטון.
+        </p>
         <div className={styles.bigPictureWrapper}>
           <img src={bigPic} alt="bigPic" />
-          <span>{t('nexign_img')}</span>
+          <span>A shot of an infographic from a product video</span>
         </div>
         <p>
-          {t('nexign_solutText4')}
+          צללנו לפרטים של העסק והבנו את המוצר - Nexign מוכר שירותי B2B מורכבים עבור מפעילי טלקום במדינות שונות. הלקוח
+          נתן לנו את הטקסט של התסריט ואת הכיוון הכללי של הסגנון הוויזואלי של פרסומות. קיבלנו עבודת צוות: הלקוח הציע
+          רעיונות, אותם סיימנו ויישמנו במהירות.
           <br />
           <br />
-          {t('nexign_solutText5')}
+          בחרנו קריינות קולית באנגלית לקליפים, כדי שקול הסרטון יישמע הכי מתאים למשתתפי הפורום. בהתחלה עבדנו רק על
+          הפרסומות למוצרים, הסרטון של 30 השניות היה עושה קבלן אחר, אבל בשלבים האחרונים של הפרויקט התברר שהוא לא מספיק
+          מקצועי. כבר לא היה זמן ולא תקציב להכנת סרטון חדש מאפס, אז החלטנו לייצר את הסרטון מתוך קטעים של ההדגמה המוכנה.
+          לקח לנו 5 ימים של עבודה קשה, והסרטון היה מוכן.
           <br />
           <br />
-          {t('nexign_solutText6')}
+          כתוצאה מכך, פתרנו את כל המשימות שהציב הלקוח ואף יותר מבלי לחרוג מהתקציב.
           <br />
           <br />
-          {t('nexign_solutText7')}
+          Nexign
           <br />
           <br />
-          {t('nexign_solutText8')}
+          הוא ספק מוביל של מערכות תמיכה לעסקים ופלטפורמות אינטרנט של למפעילי תקשורת.
         </p>
 
-        <div className={styles.subheader}>{t('nexign_frames')}</div>
+        <div className={styles.subheader}>מסגרות</div>
         <div className={styles.wrapper3d}>
           <img src={nexign_1} alt="nexign_1" />
           <img src={nexign_2} alt="nexign_2" />
@@ -101,7 +117,7 @@ const Nexign = () => {
           <img src={nexign_11} alt="nexign_11" />
         </div>
 
-        <div className={styles.subheader}>{t('servPage_result')}</div>
+        <div className={styles.subheader}>מסגרות</div>
         <div className={styles.videoWrapper}>
           <ReactPlayer
             url="https://vimeo.com/461371496"
@@ -110,7 +126,7 @@ const Nexign = () => {
             controls
             config={{
               vimeo: {
-                playerOptions: { byline: true, controls: true },
+                playerOptions: { byline: true, controls: true, playsinline: false, iframeParams: { fullscreen: 0 } },
               },
             }}
             className={styles.video}

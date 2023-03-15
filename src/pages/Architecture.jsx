@@ -25,7 +25,7 @@ const Architecture = () => {
       <section className={styles.topSection}>
         <div className={styles.image}>
           <img src={bgImg} alt="bgImage" /* className={styles.image} */ />
-          <h1>{t('arch_header')}</h1>
+          <h1>קונספט אדריכלי בתוך ז'אנר "בית מעץ".</h1>
         </div>
         <div className={styles.article}>
           <div className={styles.icons}>
@@ -43,20 +43,20 @@ const Architecture = () => {
       </section>
       <section className={styles.description}>
         <article>
-          {t('arch_task1')}
+          עבור כל אדריכל או מעצב פנים , פרויקט בית עץ הוא סוג של משחק והזדמנות נדירה להרגיש שוב כמו ילד.
           <br /> <br />
-          {t('arch_task2')}
+          זוהי עבודה מרובת משימות שבה פתרונות הנדסיים חייבים להיות בשילוב עם גישה יצירתית לתכנון, ידידותיות לסביבה
+          ועיצוב מיוחד.
         </article>
         <div className={styles.imgWrapper}>
           <img src={concept1} alt="conceptImg" />
           <img src={concept2} alt="conceptImg" />
         </div>
         <img className={styles.bigImgConcept} src={concept3} alt="conceptImg" />
-        <h3>{t('sturm_subtitle')}</h3>
+        <h3>משימה</h3>
         <article>
-          {t('arch_target1')}
-          <br /> <br />
-          {t('arch_target2')}
+          מטרת הפרויקט זה הייתה ליצור בית ייחודי לשימוש נוסף כהשכרה יומית לכל ימות השנה. הבית מיועד לזוגות ולקבוצות
+          קטנות.
         </article>
         <div className={styles.images}>
           <img className={styles.black} src={black} alt="black" />

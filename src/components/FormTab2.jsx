@@ -3,13 +3,12 @@ import { useTranslation } from 'react-i18next';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
+import axios from 'axios';
 
 import styles from './FormTab2.module.scss';
 
 const FormTab2 = () => {
   const [formStatus, setFormStatus] = useState('');
-
-  const { t } = useTranslation();
 
   const formik = useFormik({
     initialValues: {
@@ -43,6 +42,18 @@ const FormTab2 = () => {
             setFormStatus('');
           }, 4000);
         });
+
+        // код Артёма
+        let fData = new FormData();
+
+        fData.append('name', values.name);
+        fData.append('email', values.email);
+        fData.append('number', values.number);
+        fData.append('text', values.text);
+        fData.append('upload', values.upload);
+
+        axios.post('http://localhost/israel_project-main/src/php/form2-db.php', fData);
+        //
       } catch (error) {
         console.log(error);
         setFormStatus('failure');
@@ -61,7 +72,7 @@ const FormTab2 = () => {
             className={styles.input}
             name="name"
             required
-            placeholder={t('form_name1')}
+            placeholder="דוא”ל"
             type="text"
             value={formik.values.name}
             onChange={formik.handleChange}
@@ -74,7 +85,7 @@ const FormTab2 = () => {
             className={styles.input}
             name="email"
             required
-            placeholder={t('form_email')}
+            placeholder="שם"
             type="email"
             value={formik.values.email}
             onChange={formik.handleChange}
@@ -107,7 +118,7 @@ const FormTab2 = () => {
             className={styles.input}
             name="number"
             required
-            placeholder={t('form_number')}
+            placeholder="טלפון"
             type="number"
             value={formik.values.number}
             onChange={formik.handleChange}
@@ -118,7 +129,7 @@ const FormTab2 = () => {
           ) : null}
         </div>
         <div className={styles.textarea__wrapper}>
-          <label htmlFor="text">{t('form_label1')}</label>
+          <label htmlFor="text">הערות</label>
           <textarea
             className={styles.textarea}
             name="text"
@@ -126,6 +137,7 @@ const FormTab2 = () => {
             value={formik.values.text}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            placeholder="ספר לנו איזה סוג של פרויקט אתה צריך, תאר את הפרטים או שאל שאלה"
           />
           {formik.errors.text && formik.touched.text ? (
             <div className={styles.errorarea}>{formik.errors.text}</div>
@@ -136,7 +148,7 @@ const FormTab2 = () => {
       <div className={styles.uploader}>
         {/* <button type="button">Загрузить фотографию</button> */}
         {/* <div>Файл не выбран</div> */}
-        <label htmlFor="upload">{t('form_label2')}</label>
+        <label htmlFor="upload">קישור לתיק עבדות</label>
         <input
           type="file"
           name="upload"
@@ -144,13 +156,13 @@ const FormTab2 = () => {
           // onChange={(e) => formik.setFieldValue('upload', e.target.files[0])}
           onChange={(e) => formik.setFieldValue('upload', e.currentTarget.files[0])}
           accept="image/*"
-          placeholder="choose a file"
+          placeholder="שלח קורות חיים"
           //  value={formik.values.text}
         />
       </div>
       <div className={styles.button_rapper}>
         <button disabled={formik.isSubmitting} className={styles.button} type="submit">
-          {t('forms_button')}
+          שלח
         </button>
         {formStatus === 'success' && <div className={styles.success}>We contact with you soon!</div>}
         {formStatus === 'failure' && <div className={styles.failure}>Something wrong, try again Please</div>}

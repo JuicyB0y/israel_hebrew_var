@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 
 import Contacts from '../components/Contacts';
 import Form from '../components/Form';
@@ -20,14 +19,12 @@ import murm_right5 from '../assets/Murmansk_right5.png';
 import bottomImg from '../assets/Murmansk_bottom.png';
 
 const Murmansk = () => {
-  const { t } = useTranslation();
-
   return (
     <div className={styles.wrapper}>
       <section className={styles.topSection}>
         <div className={styles.image}>
           <img src={mainBg} alt="bgImage" /* className={styles.image} */ />
-          <h1>{t('murm_header')}</h1>
+          <h1>אתר של חברת ‘’MURMANSK’’</h1>
         </div>
         <div className={styles.article}>
           <div className={styles.icons}>
@@ -44,25 +41,27 @@ const Murmansk = () => {
         </div>
       </section>
       <section className={styles.description}>
-        <h2>{t('sturm_subtitle')}</h2>
-        <article>{t('murm_text1')}</article>
-        <h3>{t('murm_idea1')}</h3>
+        <h2>משימה</h2>
+        <article>המשימה היא לפתח לוגו, סגנון ואתר אינטרנט של חברה העוסקת במטענים אוויריים והובלת נוסעים.</article>
+        <h3>רעיון</h3>
         <article>
-          {t('murm_idea2')}
+          שמה של עיר הולדתה של החברה, מורמנסק, נלקח בתור הלוגו ונוסף איור של מסוק.
           <br /> <br />
-          <b>Kanit </b> {t('murm_idea3')}
+          <b>KANIT</b>
+          <br />
+          זוהי מערכת בשורה הראשונה, בולטת היטב בחלל ומושכת תשומת לב בשל קו המתאר המעובה.
           <br /> <br />
           <img className={styles.imgText} src={murm_text1} alt="text_example" />
           <br /> <br />
-          <strong>Kdam Thmor </strong> {t('murm_idea4')}
+          <strong>Kdam Thmor </strong> <br /> הגופן של הכותרת של השורה השנייה, המודגש ביחס לבירה, בעל קו מתאר דק וקפדני.
           <br /> <br />
           <img className={styles.imgText} src={murm_text2} alt="text_example" />
         </article>
-        <h3>{t('murm_style')}</h3>
+        <h3>סגנון</h3>
         <article>
-          {t('murm_style1')}
+          האתר עשוי בגוונים ניטרליים, בשילוב עם צבע אלומיניום תעופתי.
           <br /> <br />
-          {t('murm_style2')}
+          נעשה שימוש רב בתמונות צבעוניות של מטוסים.
         </article>
 
         <div className={styles.images}>
@@ -93,7 +92,7 @@ const Murmansk = () => {
           </div>
         </div>
 
-        <h3>{t('servPage_result')}</h3>
+        <h3>תוצאה</h3>
 
         <img className={styles.bottomImage} src={bottomImg} alt="bottomImg" />
       </section>

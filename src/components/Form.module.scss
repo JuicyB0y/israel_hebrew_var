@@ -8,6 +8,8 @@
 }
 
 .title {
+  display: flex;
+  justify-content: flex-end;
   margin-top: 15px;
   color: #fff;
   font-size: 33px;
@@ -23,6 +25,7 @@
 .formHeader {
   display: flex;
   margin-top: 25px;
+  flex-direction: row-reverse;
   // width: 780px;
   overflow-x: auto;
   overflow-y: hidden;
@@ -70,13 +73,19 @@
   display: flex;
   position: relative;
   justify-content: space-between;
+  flex-direction: row-reverse;
   margin-top: 40px;
   width: 100%;
 }
 
 .input__element {
   display: flex;
+  justify-content: flex-end;
   width: 30%;
+
+  input::placeholder {
+    text-align: right;
+  }
 }
 
 .error {
@@ -93,20 +102,22 @@
   color: #fff;
   padding: 4px 7px;
   width: 100%;
+  direction: rtl;
 }
 
 .select__wrapper {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   margin-top: 40px;
 }
 
 .select__wrapper div:nth-child(1) {
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .select__wrapper div:nth-child(2) {
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .select__wrapper div {
@@ -120,6 +131,7 @@
 }
 
 .select__wrapper label {
+  text-align: right;
   display: block;
   margin-bottom: 10px;
   color: #858585;
@@ -151,6 +163,8 @@ option {
 }
 
 .textarea__wrapper label {
+  display: block;
+  text-align: right;
   color: #858585;
 }
 
@@ -163,18 +177,21 @@ option {
   color: #fff;
   padding: 4px 7px;
   resize: none;
+  direction: rtl;
+  margin-top: 15px;
 }
 
 .errorarea {
   position: absolute;
   color: #c02e41;
-  top: 98px;
+  top: 121px;
 }
 
 .button_rapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .button {

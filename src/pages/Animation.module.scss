@@ -6,6 +6,7 @@
 // это стили для блика
 .title {
   position: relative;
+  text-align: right;
   margin-top: 30px;
   font-size: 55px;
   font-weight: 800;
@@ -47,6 +48,7 @@
 .service {
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
   margin: 30px 0;
 
   & span {
@@ -154,34 +156,42 @@
 
 .info {
   display: flex;
+  flex-direction: row-reverse;
   margin-top: 30px;
   justify-content: space-between;
   gap: 30px;
 
   &_left {
-    // max-width: 750px;
+    // width: 100%;
 
     & h4 {
+      text-align: right;
       font-size: 38px;
       font-weight: 700;
-      max-width: 750px;
+      // max-width: 750px;
     }
 
     & p {
+      text-align: right;
       font-size: 20px;
       margin-top: 35px;
       line-height: 1.6rem;
+      direction: rtl;
     }
   }
 
   &_right {
-    margin-right: 100px;
+    margin-left: 50px;
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
     & div {
       display: flex;
+      flex-direction: row-reverse;
       align-items: center;
-      width: 104%;
+      width: 111%;
 
       & a {
         font-size: 25px;
@@ -189,16 +199,19 @@
         color: #c8d9e9;
         border-bottom: 3px solid #c8d9e9;
       }
-      & img {
-        margin-left: 7px;
+      img {
+        margin-right: 16px;
         width: 20px;
         height: 20px;
         animation: leftRight 2s ease infinite;
       }
     }
     & p {
+      display: flex;
+      justify-content: flex-end;
+      text-align: right;
       font-size: 18px;
-      max-width: 280px;
+      // max-width: 280px;
       margin-top: 8px;
     }
   }
@@ -228,11 +241,15 @@
   padding: 50px 0;
 
   h2 {
+    display: block;
+    // justify-content: flex-end;
+    text-align: right;
     font-weight: 700;
     font-size: 48px;
     line-height: 55px;
     width: 73%;
-    margin: 25px 0;
+    margin: 25px 0 25px auto;
+    direction: rtl;
   }
   &_subtitle {
     font-size: 40px;
@@ -339,14 +356,27 @@
 }
 
 .workSubtitle {
+  text-align: right;
   font-weight: 700;
   font-size: 48px;
   line-height: 55px;
   margin-top: 25px;
 }
 
+.extraHeader {
+  // display: flex;
+  // justify-content: flex-end;
+  margin: 0 0 0 auto;
+  text-align: right;
+  font-size: 30px;
+  font-weight: normal;
+  width: 80%;
+  direction: rtl;
+}
+
 .typesWrapper {
   display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 25px;
@@ -354,8 +384,13 @@
 
 .types {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   width: 45%;
+
+  img {
+    margin-left: 15px;
+  }
 
   h5 {
     font-size: 21px;
@@ -366,7 +401,15 @@
     max-width: 400px;
     font-size: 17px;
     line-height: 1.5rem;
+    text-align: right;
+    direction: rtl;
   }
+}
+
+.typesInside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .works {
@@ -423,31 +466,49 @@
 .detailList {
   // max-width: 45%;
   display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   gap: 5%;
   margin-top: 41px;
 
   &_item {
     position: relative;
+    // display: flex;
+    // align-items: flex-end;
+    // flex-direction: column;
     font-size: 25px;
     font-weight: 700;
     margin-bottom: 35px;
     // width: 600px;
     width: 45%;
 
+    div {
+      display: flex;
+      justify-content: flex-end;
+      // flex-direction: row-reverse;
+
+      span {
+        margin-right: 5px;
+      }
+    }
+
     hr {
       margin: 15px 0 20px 0;
     }
 
     article {
+      text-align: right;
       font-weight: 600;
       font-size: 22px;
+      direction: rtl;
     }
   }
 }
 
 .form {
   display: flex;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 //
@@ -487,6 +548,65 @@
   animation-play-state: paused;
 }
 
+@media screen and (min-width: 2600px) {
+  .works {
+    &_smallWrapper {
+      // position: relative;
+      width: 100%;
+      height: auto;
+      margin-bottom: 5px;
+    }
+
+    &_carousel {
+      display: block;
+      margin-bottom: 50px;
+      position: static;
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    &_topCarousel,
+    &_bottomCarousel {
+      display: flex;
+      align-items: center;
+      width: 69%;
+      margin-top: 0;
+      gap: 30px;
+
+      // margin: 10px auto;
+    }
+
+    &_card {
+      width: 92%;
+      margin-top: 30px;
+
+      &_img {
+        width: 100%;
+      }
+
+      &_card_case {
+        top: 15px;
+        right: 42px;
+      }
+    }
+
+    .works_topCarousel:nth-child(2),
+    .works_bottomCarousel:nth-child(2) {
+      display: none;
+    }
+
+    .animate,
+    .animateRight {
+      top: 50%;
+      transform: translate(0, 0); /* тут поменял для анимации в другую сторону */
+    }
+    .article {
+      max-width: 90%;
+      margin-top: 20px;
+    }
+  }
+}
+
 @media screen and (max-width: 1550px) {
   .works_smallWrapper {
     height: 211px;
@@ -521,7 +641,7 @@
   }
 
   .info_right {
-    margin-right: 30px;
+    margin-left: -25px;
   }
 
   .ph_emoji {
@@ -784,6 +904,9 @@
     }
   }
 
+  .extraHeader {
+    width: 100%;
+  }
   //   .carouselBigWrapper {
   //     width: 100%;
   //   }
@@ -886,7 +1009,8 @@
 
     .info_right {
       display: block;
-      margin: 0 auto;
+      margin-right: 38px;
+      min-width: auto;
     }
 
     // картинки

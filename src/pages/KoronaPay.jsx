@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import ReactPlayer from 'react-player';
 
 import Form from '../components/Form';
 import Contacts from '../components/Contacts';
@@ -28,14 +28,12 @@ import korona_banner2 from '../assets/korona_banner2.png';
 // import koronaVideo from '../assets/KoronaVideo1.mp4';
 
 const KoronaPay = () => {
-  const { t } = useTranslation();
-
   return (
     <div className={styles.wrapper}>
       <section className={styles.topSection}>
         <div className={styles.image}>
           <img src={headerImg} alt="bgImage" /* className={styles.image} */ />
-          <h1>{t('korona_header')}</h1>
+          <h1>פרסומת תלת מימדית למערכת התשלומים Korona Pay</h1>
         </div>
         <div className={styles.article}>
           <div className={styles.icons}>
@@ -52,41 +50,45 @@ const KoronaPay = () => {
         </div>
       </section>
       <section className={styles.description}>
-        <h2 className={styles.subheader}>{t('sturm_subtitle')}</h2>
+        <h2 className={styles.subheader}>משימה</h2>
         <p>
-          {t('korona_task_text1')}
+          לייצר סרטון לקמפיין הפרסום החדש של המותג האירופאי . סרטון לראש השנה שישמש עד אמצע ינואר 2021 וגרסה רגילה
+          לחודשים הנותרים.
           <br />
           <br />
-          {t('korona_task_text2')}
+          כדי לתמוך בסרטונים, נוצרו גם באנרים סטטיים ומונפשים בסגנון סטנדרטי של שנה חדשה.
           <br />
           <br />
-          {t('korona_task_text3')}
+          הפרויקט כולו , מהמשגה ועד מסירת הסרטון הושלם תוך חודש.
         </p>
-        <div className={styles.subheader}>{t('korona_3d')}</div>
+        <div className={styles.subheader}>3D models</div>
         <div className={styles.wrapper3d}>
           <img src={korona3d_1} alt="korona3d_1" />
           <img src={korona3d_2} alt="korona3d_2" />
           <img src={korona3d_3} alt="korona3d_3" />
         </div>
 
-        <div className={styles.subheader}></div>
-        <p>{t('korona_stil_text')}</p>
+        <div className={styles.subheader}>Stilshots</div>
+        <p>
+          עשינו שלוש איטרציות במהלך הפיתוח של גיליונות הסטילס. הקונספט של הסליל לא השתנה, אבל פלטת הצבעים של הסליל
+          הושלמה ברובה סופית.
+        </p>
         <div className={styles.wrapperStill}>
           <div className={styles.imgWrapper}>
             <img src={korona_stil1} alt="korona_stil1" />
-            <span>{t('korona_stil_1')}</span>
+            <span>First iteration</span>
           </div>
           <div className={styles.imgWrapper}>
             <img src={korona_stil2} alt="korona_stil1" />
-            <span>{t('korona_stil_2')}</span>
+            <span>Second iteration</span>
           </div>
           <div className={styles.imgWrapper}>
             <img src={korona_stil3} alt="korona_stil1" />
-            <span>{t('korona_stil_3')}</span>
+            <span>Third iteration</span>
           </div>
         </div>
 
-        <div className={styles.subheader}>{t('korona_scenes')}</div>
+        <div className={styles.subheader}>סצנות של הסרטון</div>
         <div className={styles.scenesWrapper}>
           <img src={korona_scene1} alt="korona_scene1" />
           <img src={korona_scene2} alt="korona_scene2" />
@@ -97,18 +99,35 @@ const KoronaPay = () => {
           <img src={korona_scene7} alt="korona_scene7" />
         </div>
 
-        <div className={styles.subheader}>{t('korona_ny')}</div>
-        <p>{t('korona_ny_text')}</p>
+        <div className={styles.subheader}>גרסת ראש השנה</div>
+        <p>
+          עבור הסרטון של גרסת החג שינינו כמה פרטים: הוספנו שלג, עצי חג המולד ומתנות, הכדור הפך לצעצוע חג המולד, והשלט
+          ניהיה דומה לסוכרייה על מקל.
+        </p>
         <div className={styles.nyWrapper}>
           <img src={korona_ny1} alt="korona_ny1" />
           <img src={korona_ny2} alt="korona_ny2" />
         </div>
 
-        <div className={styles.subheader}>{t('korona_anim')}</div>
+        <div className={styles.subheader}>אנימציה</div>
         <div className={styles.videoWrapper}>
-          <p>{t('korona_anim_text')}</p>
+          <p>
+            בשלבים האחרונים של פיתוח סגנון הווידאו, עשינו אנימטיק - גרסת טיוטה לסרטון עם קריינות. האנימטיק נותן מושג טוב
+            יותר על הסצנות והדינמיקה של הסרטון מאשר לוח סיפור פשוט.
+          </p>
           <div>
-            <iframe
+            <ReactPlayer
+              url="https://player.vimeo.com/video/493357085?h=d3dc645eac&byline=0&portrait=0"
+              // width="640"
+              // height="300"
+              config={{
+                vimeo: {
+                  playerOptions: { byline: true, controls: true, playsinline: false, iframeParams: { fullscreen: 0 } },
+                },
+              }}
+              className={styles.video}
+            />
+            {/* <iframe
               className={styles.video}
               src="https://player.vimeo.com/video/493357085?h=d3dc645eac&byline=0&portrait=0"
               // width="640"
@@ -118,7 +137,7 @@ const KoronaPay = () => {
               allowfullscreen
               frameborder="0"
               allow="autoplay fullscreen picture-in-picture"
-              allowfullscreen></iframe>
+              allowfullscreen></iframe> */}
           </div>
           {/* <script src="https://player.vimeo.com/api/player.js"></script> */}
 

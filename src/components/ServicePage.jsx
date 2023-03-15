@@ -20,6 +20,7 @@ import keyboard from '../assets/dev_keyboard.png';
 import screen from '../assets/dev_screen.png';
 import vis1 from '../assets//3d_1.png';
 import vis2 from '../assets//3d_2.png';
+import left2 from '../assets/left-bold.png';
 
 import insta from '../assets/instagram-svgrepo-com.svg';
 import whatsapp from '../assets/whatsapp-svgrepo-com.svg';
@@ -149,10 +150,10 @@ const ServicePage = ({
         </article>
         <aside className={`${styles.info_right} ${stylesFor3d === true ? styles.info_right3d : ''}`}>
           <div>
-            <a href="#">{t('servPage_arrow')}</a>
-            <img src={arrow} alt="arrow" />
+            <a href="#">תשאיר את הבקשה שלך</a>
+            <img src={left2} alt="arrow" />
           </div>
-          <p>{t('servPage_arrText')}</p>
+          <p>יעוץ חינם ונראה לך היכן להתחיל</p>
         </aside>
       </section>
       <section className={styles.cards}>
@@ -188,11 +189,14 @@ const ServicePage = ({
         {/* обычный  stagesList*/}
         {stagesList.length > 0 && (
           <>
-            <h3 className={styles.works_subtitle}>{t('servPage_stages')}</h3>
+            <h3 className={styles.works_subtitle}>לדוגמא</h3>
             <ol className={styles.list}>
               {stagesList.map((item) => (
                 <li className={styles.list_item}>
-                  <span>{item.count}</span> {item.info}
+                  <span className={styles.inside}>
+                    <span>{item.info}</span>
+                    <span> {item.count}</span>
+                  </span>
                 </li>
               ))}
             </ol>
@@ -215,17 +219,28 @@ const ServicePage = ({
             </ol>
           </>
         )}
+        {location.pathname == '/webdevelopment' && (
+          <>
+            <img className={styles.keyboard} src={keyboard} alt="keyboard" />
+          </>
+        )}
+        {resultText !== '' && (
+          <>
+            <h3 className={styles.works_subtitle}>תוצאה</h3>
+            <article className={styles.article}>{resultText}</article>
+          </>
+        )}
 
         {TopImages.length > 0 && (
           <div className={styles.works_miniWrapper}>
-            <h3 className={styles.works_subtitle}>{t('servPage_examples')}</h3>
+            <h3 className={styles.works_subtitle}>לדוגמא</h3>
           </div>
         )}
         {/* это статичные фотки */}
         {OnlyImages.length > 0 && (
           <>
             <div className={styles.works_miniWrapper}>
-              <h3 className={styles.works_subtitleStatic}>{t('servPage_examples')}</h3>
+              <h3 className={styles.works_subtitleStatic}>דוגמאות</h3>
             </div>
             <div className={styles.works_onlyCarousel}>
               {OnlyImages?.map((item) => (
@@ -319,17 +334,6 @@ const ServicePage = ({
             </ol>
           </>
         )} */}
-        {resultText !== '' && (
-          <>
-            <h3 className={styles.works_subtitle}>{t('servPage_result')}</h3>
-            <article className={styles.article}>{resultText}</article>
-            {location.pathname == '/webdevelopment' && (
-              <>
-                <img className={styles.keyboard} src={keyboard} alt="keyboard" />
-              </>
-            )}
-          </>
-        )}
       </section>
       <div className={styles.form}>
         <Form />

@@ -51,20 +51,21 @@ const LogoVideoMaker = () => {
         </div> */}
       </section>
       <section className={styles.description}>
-        <h1>{t('video_header')}</h1>
-        <h3>{t('video_task')}</h3>
+        <h1>לוגו לצלם וידאו</h1>
+        <h3>משימה</h3>
         <article>
-          {t('video_taskText1')}
+          לפתח לוגו תמציתי ומינימליסטי ליוצר וידאו. הלקוח גם הזמין את האנימציה של הלוגו להכנסתה בתחילת ובסוף של הסרטון .
           <br /> <br />
-          {t('video_taskText2')}
+          הלקוח מסר רק את שם החברה - "REC NO OFF".
         </article>
-        <h3>{t('video_decision')}</h3>
+        <h3>פתרון</h3>
         <article>
-          {t('video_decisionText1')}
+          לזיהוי לוגו, בחרנו את צורת צמצם המצלמה.
           <br /> <br />
-          {t('video_decisionText2')}
+          נשקלו ערכות צבעים שונות של הלוגו , אך הלקוח הסתפק בשחור.
           <br /> <br />
-          {t('video_decisionText3')}
+          לטקסט בחרנו 2 פונטים - Arial Black Regular ו-Bahnschrift Regular. זה נותן רצינות ללוגו, אבל באותו הזמן נראה
+          ידידותי.
         </article>
 
         <div className={styles.visualWrapper}>
@@ -91,7 +92,7 @@ const LogoVideoMaker = () => {
         <p className={styles.text}>{t('video_search')}</p>
         <div className={styles.logoProptotype}>
           <img src={oneLogo} alt="oneLogo" />
-          <p>{t('video_final')}</p>
+          <p>הגרסה הסופית, שהלקוח מאוד אהב</p>
         </div>
 
         <div className={styles.videoWrapper}>

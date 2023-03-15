@@ -25,7 +25,7 @@ const Valkirye = () => {
       <section className={styles.topSection}>
         <div className={styles.image}>
           <img src={mainBg} alt="bgImage" /* className={styles.image} */ />
-          <h1>{t('valk_header')}</h1>
+          <h1>אתר לחברת "וולקירי".</h1>
         </div>
         <div className={styles.article}>
           <div className={styles.icons}>
@@ -42,29 +42,36 @@ const Valkirye = () => {
         </div>
       </section>
       <section className={styles.description}>
-        <h2>{t('sturm_subtitle')}</h2>
-        <article>{t('valk_text1')}</article>
-        <h3>{t('valk_idea')}</h3>
+        <h2>משימה</h2>
         <article>
-          {t('valk_idea_1')}
+          המשימה הייתה ליצור עיצוב אתר פשוט אך מובן ויזואלית עבור חברה המפתחת ביגוד לטמפרטורות נמוכות במיוחד, גם ביגוד
+          לציידים ועובדי שירותים מיוחדים.
+        </article>
+        <h3>רעיון</h3>
+        <article>
+          מכיוון שרוב רוכשי המוצרים הם ציידים וקציני אכיפת החוק, צללית של ולקיריה (עלמה לוחמת) שימשה כרעיון המרכזי של
+          הלוגו.
           <br /> <br />
-          {t('valk_idea_2')}
+          גופנים הם חלק חשוב מהזהות הארגונית. הם תומכים בסגנון הכללי, עוזרים לעיצוב להיות מוכר גם כאשר אין מספיק מקום
+          עבורו.
           <br /> <br />
-          <span>RALEWAY </span> {t('valk_idea_3')}
+          <span>RALEWAY </span> RALEWAY היא מערכת שנקבעה בשוגג (כותרות בשורה ראשונה), מודרנית, קלה לקריאה ואינה מסבכת את
+          העיצוב הויזואלי.
           <br /> <br />
           <img className={styles.imgText} src={valk_text1} alt="text_example" />
           <br /> <br />
-          <strong>Readex Pro</strong> {t('valk_idea_4')}
+          <strong> הגופן של הכותרת ברמה השנייה משלים היטב את הגופן הראשי.</strong>
           <br /> <br />
           <img className={styles.imgText} src={valk_text2} alt="text_example" />
         </article>
-        <h3>{t('valk_style')}</h3>
+        <h3>סגנון</h3>
         <article>
-          {t('valk_ill')}
+          אילוסטרציה
           <br /> <br />
-          {t('valk_style_1')}
+          היציבות והביטחון של ה-VALKYRIE מוצגים באיורים. הם סטטיים ורגועים. האיורים הביאו לעיצוב סיפור על כפור עז, קידום
+          ומילוי משימות.
           <br /> <br />
-          {t('valk_style_2')}
+          ערכת הצבעים הארגונית גם כמו שם המותג , היא מרכיב ייחודי המאפשר לזהות את החברה מול מתחרים
         </article>
 
         <div className={styles.images}>
@@ -93,7 +100,7 @@ const Valkirye = () => {
           </div>
         </div>
 
-        <h3>{t('servPage_result')}</h3>
+        <h3>תוצאה</h3>
 
         <img className={styles.bottomImage} src={bottomImg} alt="bottomImg" />
       </section>

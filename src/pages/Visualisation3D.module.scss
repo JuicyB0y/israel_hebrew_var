@@ -10,6 +10,7 @@
   font-size: 55px;
   font-weight: 800;
   background-size: contain;
+  text-align: right;
   line-height: 5rem;
   filter: drop-shadow(0 5px 3px #bfccd8);
   -webkit-background-clip: text;
@@ -48,6 +49,7 @@
   display: flex;
   justify-content: space-between;
   margin: 30px 0;
+  flex-direction: row-reverse;
 
   & span {
     display: flex;
@@ -88,51 +90,52 @@
   display: flex;
   margin-top: 30px;
   justify-content: space-between;
-  //   gap: 30px;
+  flex-direction: row-reverse;
+  gap: 30px;
 
   &_left {
     //  max-width: 750px;
 
     & h4 {
-      font-size: 30px;
+      font-size: 37px;
       font-weight: 700;
       max-width: 750px;
     }
   }
 
   &_right {
-    position: relative;
-    margin: 0 100px;
-    //  width: 310px;
+    margin-left: 50px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
     & div {
       display: flex;
+      flex-direction: row-reverse;
       align-items: center;
-      width: 108%;
-      position: relative;
+      width: 111%;
 
       & a {
         font-size: 25px;
         font-weight: 700;
         color: #c8d9e9;
         border-bottom: 3px solid #c8d9e9;
-        // width: 100%;
+      }
+      img {
+        margin-right: 16px;
+        width: 20px;
+        height: 20px;
+        animation: leftRight 2s ease infinite;
       }
     }
     & p {
-      font-size: 20px;
-      max-width: 280px;
+      display: flex;
+      justify-content: flex-end;
+      text-align: right;
+      font-size: 18px;
+      // max-width: 280px;
       margin-top: 8px;
-      font-weight: 600;
-    }
-    img {
-      margin-left: 7px;
-      width: 20px;
-      height: 20px;
-      animation: leftRight 2s ease infinite;
-      position: absolute;
-      top: 7px;
-      right: -12px;
     }
   }
 }
@@ -146,7 +149,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-
+  flex-direction: row-reverse;
   width: 100%;
 
   margin-top: 30px;
@@ -155,7 +158,7 @@
     position: absolute;
     width: 140px;
     height: 140px;
-    right: -2px;
+    left: -2px;
     top: 50px;
   }
 }
@@ -170,13 +173,13 @@
   width: 100px;
   height: 100px;
   top: -33px;
-  right: 32px;
+  left: 32px;
 }
 .vis1 {
   width: 200px;
   height: 200px;
   top: -18px;
-  left: 525px;
+  right: 525px;
 }
 
 .card {
@@ -184,6 +187,7 @@
   margin-top: 15px;
   margin-right: 30px;
   max-width: 710px;
+  text-align: right;
 
   &_name {
     font-size: 25px;
@@ -196,6 +200,7 @@
     font-size: 19px;
     font-weight: 600;
     line-height: 1.7rem;
+    direction: rtl;
   }
 
   &_list {
@@ -215,6 +220,7 @@
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 45px;
+    text-align: right;
   }
 
   // МЕНЯЛ
@@ -315,9 +321,9 @@
 
 .works {
   &_miniWrapper {
-    display: flex;
     position: relative;
     margin-top: 30px;
+    text-align: right;
   }
 }
 
@@ -345,13 +351,28 @@
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
+  flex-direction: row-reverse;
 
   &_item {
     position: relative;
     font-size: 25px;
     font-weight: 700;
     margin-bottom: 35px;
-    max-width: 520px;
+    // max-width: 520px;
+    text-align: right;
+    width: 45%;
+
+    .inside {
+      display: flex;
+    }
+
+    span:nth-child(2) {
+      margin: 0 0 0 10px;
+    }
+
+    span {
+      margin: 0 0 0 auto;
+    }
 
     hr {
       margin: 15px 0 20px 0;
@@ -361,6 +382,7 @@
       font-weight: 600;
       font-size: 22px;
       line-height: 2rem;
+      direction: rtl;
     }
   }
 
@@ -373,6 +395,7 @@
 
 .form {
   display: flex;
+  flex-direction: row-reverse;
 }
 
 //
@@ -415,6 +438,124 @@
   animation-play-state: paused;
 }
 
+@media screen and (min-width: 2600px) {
+  .works {
+    &_smallWrapper {
+      // position: relative;
+      width: 100%;
+      height: auto;
+      margin-bottom: 5px;
+    }
+
+    &_carousel {
+      display: block;
+      margin-bottom: 50px;
+      position: static;
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    &_topCarousel,
+    &_bottomCarousel {
+      display: flex;
+      align-items: center;
+      width: 69%;
+      margin-top: 0;
+      gap: 30px;
+
+      // margin: 10px auto;
+    }
+
+    &_card {
+      width: 92%;
+      margin-top: 30px;
+
+      &_img {
+        width: 100%;
+      }
+
+      &_card_case {
+        top: 15px;
+        right: 42px;
+      }
+    }
+
+    .works_topCarousel:nth-child(2),
+    .works_bottomCarousel:nth-child(2) {
+      display: none;
+    }
+
+    .animate,
+    .animateRight {
+      top: 50%;
+      transform: translate(0, 0); /* тут поменял для анимации в другую сторону */
+    }
+    .article {
+      max-width: 90%;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 2600px) {
+  .works {
+    &_smallWrapper {
+      // position: relative;
+      width: 100%;
+      height: auto;
+      margin-bottom: 5px;
+    }
+
+    &_carousel {
+      display: block;
+      margin-bottom: 50px;
+      position: static;
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    &_topCarousel,
+    &_bottomCarousel {
+      display: flex;
+      align-items: center;
+      width: 69%;
+      margin-top: 0;
+      gap: 30px;
+
+      // margin: 10px auto;
+    }
+
+    &_card {
+      width: 92%;
+      margin-top: 30px;
+
+      &_img {
+        width: 100%;
+      }
+
+      &_card_case {
+        top: 15px;
+        right: 42px;
+      }
+    }
+
+    .works_topCarousel:nth-child(2),
+    .works_bottomCarousel:nth-child(2) {
+      display: none;
+    }
+
+    .animate,
+    .animateRight {
+      top: 50%;
+      transform: translate(0, 0); /* тут поменял для анимации в другую сторону */
+    }
+    .article {
+      max-width: 90%;
+      margin-top: 20px;
+    }
+  }
+}
+
 @media screen and (max-width: 2291px) {
   .works_smallWrapper {
     // height: 520px;
@@ -452,10 +593,6 @@
     }
   }
 
-  //   .info_right {
-  //     margin-right: 30px;
-  //   }
-
   .form {
     display: block;
   }
@@ -465,14 +602,6 @@
     top: 15px;
     right: 14px;
   }
-
-  //   .detailList_item:nth-child(1) {
-  //     .icons3d {
-  //       width: 80px;
-  //       height: 80px;
-  //       right: -5%;
-  //     }
-  //   }
 
   .animate3d {
     top: 60%;
@@ -488,10 +617,6 @@
 }
 
 @media screen and (max-width: 1130px) {
-  .info_right {
-    margin: 0 50px;
-  }
-
   .works {
     &_smallWrapper {
       height: 23vw;
@@ -532,18 +657,11 @@
   }
 
   .info_right {
+    margin-left: -25px;
     div {
       a {
         font-size: 19px;
       }
-      p {
-        font-size: 17px;
-      }
-    }
-
-    img {
-      top: 2px;
-      left: 215px;
     }
   }
 
@@ -557,7 +675,7 @@
     width: 150px;
     height: 150px;
     top: -18px;
-    left: 400px;
+    right: 400px;
   }
 
   .card {
@@ -598,7 +716,7 @@
   }
 
   .detailList {
-    max-width: 65%;
+    // max-width: 65%;
     &_item {
       max-width: 100%;
     }
@@ -619,17 +737,21 @@
   }
 
   .info_right {
-    margin-left: 15px;
+    margin-left: -65px;
     div {
       a {
-        font-size: 17px;
+        font-size: 15px;
       }
     }
+
     p {
-      font-size: 17px;
+      font-size: 15px;
     }
-    img {
-      top: 1px;
+  }
+
+  .detailList {
+    &_item {
+      width: 80%;
     }
   }
 
@@ -642,7 +764,7 @@
     width: 130px;
     height: 130px;
     top: -18px;
-    left: 400px;
+    right: 400px;
   }
 
   .works {
@@ -702,14 +824,10 @@
     }
 
     &_right {
-      margin-top: 25px;
+      // margin-top: 25px;
       div {
         a {
           font-size: 20px;
-        }
-
-        img {
-          left: 224px;
         }
       }
     }
@@ -733,11 +851,13 @@
     width: 100px;
     height: 100px;
     top: -2px;
-    left: 308px;
+    right: 308px;
   }
 
   .detailList {
-    max-width: 80%;
+    &_item {
+      width: 100%;
+    }
   }
 
   .works {
@@ -876,22 +996,9 @@
   }
 
   .info_right {
-    margin: 30px 0 0 0;
-
-    div {
-      width: 100%;
-      a {
-        font-size: 23px;
-      }
-      img {
-        display: none;
-      }
-    }
-
-    p {
-      max-width: 100%;
-      font-size: 19px;
-    }
+    display: block;
+    margin-right: 38px;
+    min-width: auto;
   }
 
   // картинки
@@ -907,7 +1014,7 @@
     width: 80px;
     height: 80px;
     top: 19px;
-    left: 289px;
+    right: 289px;
   }
 
   .cards {
@@ -915,7 +1022,7 @@
   }
 
   .card {
-    max-width: 90%;
+    max-width: 100%;
 
     &_name {
       font-size: 23px;

@@ -10,32 +10,30 @@ import styles from './Home.module.scss';
 
 import heart from '../assets/heart_blue.png';
 import emoji from '../assets/emoji_blue.png';
-import flag1 from '../assets/isflag1.png';
+import flag1 from '../assets/jew_flag.png';
 import flag2 from '../assets/isflag2.png';
 
 // import reserve from '../assets/reserve.png';
 
 const Home = () => {
   // Translation
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   const { theme } = useContext(ThemeContext);
 
   return (
     <div className={styles.home_wrapper}>
       <img className={styles.flag1} src={flag1} alt="flag1_icon" />
-      <div className={`${styles.header_wrapper} ${theme === 'reversed' ? styles.header_wrapper_reversed : ''}`}>
-        <Link className={`${styles.title1} ${theme === 'reversed' ? styles.title1_reversed : ''}`} to="/webdevelopment">
+      <div className={`${styles.header_wrapper} ${styles.header_wrapper_reversed}`}>
+        <Link className={`${styles.title1} ${styles.title1_reversed}`} to="/webdevelopment">
           WEB
         </Link>
         <br />
-        <Link
-          className={`${styles.title2} ${theme === 'reversed' ? styles.title2_reversed : ''}`}
-          to="/3dvisualization">
+        <Link className={`${styles.title2} ${styles.title2_reversed}`} to="/3dvisualization">
           3D
         </Link>
         <br />
-        <Link className={`${styles.title3} ${theme === 'reversed' ? styles.title3_reversed : ''}`} to="/logos">
+        <Link className={`${styles.title3} ${styles.title3_reverseds}`} to="/logos">
           DESIGN
         </Link>
         {/* <h3 className={styles.title33} to="#">
@@ -46,7 +44,10 @@ const Home = () => {
         <img className={styles.emoji} src={emoji} alt="emoji_icon" />
         {/* <img className={styles.flag1} src={flag1} alt="flag1_icon" /> */}
       </div>
-      <p className={`${styles.text} ${theme === 'reversed' ? styles.text_reversed : ''}`}>{t('home_text')}</p>
+      <p className={`${styles.text} ${styles.text_reversed}`}>
+        .אנו מפתחים רעיונות ואסטרטגיות יצירתיים לפתרון בעיות עסקיות. אנו עוסקים בפרויקטים שיווקיים מורכבים, יוצרים
+        אנימציה 2D ו3D , וידאו, מיתוג ועיצוב גרפי.
+      </p>
       <div className={styles.form}>
         <Form />
         <Contacts />

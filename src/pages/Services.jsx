@@ -17,12 +17,12 @@ const Services = () => {
   const { t } = useTranslation();
 
   const serviceArr = [
-    { name: t('services_animation'), link: '/animation', img: animation },
-    { name: t('services_viz'), link: '/3dvisualization', img: visual },
+    { name: 'אנימציה', link: '/animation', img: animation },
+    { name: '3D ויזואליזציה ', link: '/3dvisualization', img: visual },
     // { name: t('services_graph'), link: '#', img: design },
-    { name: t('services_logos'), link: '/logos', img: logos },
-    { name: t('services_photo'), link: '/retouching', img: photos },
-    { name: t('services_webDev'), link: '/webdevelopment', img: web },
+    { name: 'לוגו וזהות תאגידית', link: '/logos', img: logos },
+    { name: 'ריטוש תמונות', link: '/retouching', img: photos },
+    { name: 'בניית אתרים', link: '/webdevelopment', img: web },
   ];
 
   return (

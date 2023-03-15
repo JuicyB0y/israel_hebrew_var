@@ -4,21 +4,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  //
-  // position: relative;
-
-  &_reversed {
-    flex-direction: row-reverse;
-  }
+  flex-direction: row-reverse;
 }
 
 .first__section {
   display: flex;
   align-items: center;
-
-  &_reversed {
-    flex-direction: row-reverse;
-  }
+  flex-direction: row-reverse;
+  flex: 1;
 }
 
 .bar {
@@ -61,18 +54,20 @@
   margin-right: 25px;
 }
 
+// .left_section {
+//   margin-right: auto;
+// }
+
 .sections {
+  width: 100%;
   margin-left: 50px;
   display: flex;
   align-items: center;
   //
   position: relative;
-
-  &_reversed {
-    flex-direction: row-reverse;
-    margin-left: 0;
-    margin-right: 50px;
-  }
+  flex-direction: row-reverse;
+  margin-left: 0;
+  margin-right: 50px;
 }
 
 .design {
@@ -100,6 +95,12 @@
   text-shadow: 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #c8d9e9, 2px 2px 2px rgba(255, 225, 219, 0.703);
 }
 
+.sections {
+  a:nth-child(3) {
+    margin-right: auto;
+  }
+}
+
 .services {
   font-size: 25px;
   font-weight: 500;
@@ -109,7 +110,13 @@
 
   //
   position: relative;
+
+  // margin-right: 100px;
 }
+
+// .services:nth-child(1) {
+//   justify-content: flex-end;
+// }
 
 // начало - это стили для активного элемента
 .sections .marker {
@@ -138,10 +145,10 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 10px 17px;
+  padding: 10px 29px;
   background-color: #000;
   color: #fff;
-  font-size: 20px;
+  font-size: 21px;
   border-radius: 18px;
   margin-right: 30px;
 
@@ -158,6 +165,9 @@
     .marker {
       background: #c8d9e9;
     }
+  }
+  .button {
+    margin-right: 20px;
   }
 
   // .sections :global(a.active) {
@@ -177,18 +187,27 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .wrapper {
+    padding: 23px 5px 30px 5px;
+  }
+  .services {
+    font-size: 18px;
+  }
+}
+
 @media screen and (max-width: 750px) {
   .button {
-    padding: 10px 4px;
+    padding: 10px 20px;
     font-size: 20px;
     margin-right: 22px;
-    width: 153px;
+    // width: 153px;
   }
 }
 
 @media screen and (max-width: 700px) {
   .wrapper {
-    padding-bottom: 0;
+    padding: 23px 30px 0 30px;
   }
 
   .design {

@@ -21,27 +21,27 @@ const Dali = () => {
       <section className={styles.topSection}>
         <div className={styles.image}>
           <img src={headerImg} alt="bgImage" /* className={styles.image} */ />
-          <h1>{t('dali_header')}</h1>
+          <h1>Dali and Picasso</h1>
         </div>
       </section>
       <section className={styles.description}>
-        <h3>{t('sturm_subtitle')}</h3>
+        <h3>משימה</h3>
         <article>
-          <p>{t('dali_text1')}</p>
+          <p>להכין פוסטר לתערוכה על יצירותיהם של האמנים סלבדור דאלי ופבלו פיקאסו.</p>
           <br /> <br />
-          <p>{t('dali_text2')}</p>
+          <p>השתמשו בעבודות האמנים והעברנו את הסגנון שבו עבדו.</p>
         </article>
         <div className={styles.topImgWrapper}>
           <div className={styles.imageLittle}>
             <img src={little1} alt="image" />
-            <p>{t('dali_pic1')}</p>
+            <p>La persistencia de la memoria, 1931</p>
           </div>
           <div className={styles.imageLittle}>
             <img src={little2} alt="image" />
-            <p>{t('dali_pic2')}</p>
+            <p>Guernica, 1937</p>
           </div>
         </div>
-        <h3>{t('servPage_result')}</h3>
+        <h3>תוצאה</h3>
         <img className={styles.bigImage} src={res1} alt="res1" />
         <div className={styles.botWrapper}>
           <img className={styles.bigImage} src={res2} alt="res2" />

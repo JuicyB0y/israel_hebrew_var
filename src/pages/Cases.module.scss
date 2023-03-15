@@ -153,7 +153,11 @@
 // }
 
 .popupWrapper {
+  // display: flex;
   position: relative;
+  // margin: 0 0 0 auto;
+  // justify-content: flex-end;
+  text-align: right;
 }
 
 .casesButton {
@@ -168,10 +172,11 @@
   background: transparent;
   border-radius: 15px;
   border: 2px solid black;
-  margin-top: 50px;
+  margin: 50px 0 0 auto;
+  flex-direction: row-reverse;
 
   img {
-    margin-left: 10px;
+    margin-right: 10px;
   }
 
   &:hover {
@@ -186,7 +191,7 @@
 
 .popup {
   position: absolute;
-  left: 0px;
+  right: 0px;
   top: 51px;
   background: #ffffff;
   box-shadow: 0px 5px 26px rgb(0 0 0 / 17%);
@@ -213,7 +218,7 @@
 
 .popupActive {
   position: absolute;
-  left: 0px;
+  right: 0px;
   top: 51px;
   background: #ffffff;
   box-shadow: 0px 5px 26px rgb(0 0 0 / 17%);
@@ -223,6 +228,7 @@
   opacity: 1;
   transition: opacity 0.5s, height 0.3s;
   height: 231px;
+  // width: 300px;
 }
 
 .activeType {
@@ -315,6 +321,30 @@
 .form {
   display: flex;
   margin-top: 50px;
+}
+
+@media screen and (min-width: 2100px) {
+  .cardContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .cardContainer {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (min-width: 2700px) {
+  .cardContainer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  .cardContainer {
+    grid-template-columns: repeat(7, 1fr);
+  }
 }
 
 @media screen and (max-width: 1300px) {

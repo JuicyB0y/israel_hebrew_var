@@ -7,7 +7,7 @@
   margin-left: -50px;
   margin-top: -15px;
   margin-right: -50px;
-  border-radius: 50px 0 0 0;
+  border-radius: 0 50px 0 0;
   overflow: hidden;
   img {
     width: 100%;
@@ -17,13 +17,14 @@
   h1 {
     position: absolute;
     bottom: 0;
-    left: 70px;
+    right: 70px;
     color: rgb(255, 255, 255);
     font-size: 80px;
     // background-color: rgba(255, 255, 255, 0.6);
     border-radius: 25px;
     padding: 5px 10px;
     display: inline-block;
+    text-align: right;
   }
 }
 
@@ -34,15 +35,18 @@
   //   overflow: hidden;
   h3 {
     font-size: 40px;
-    margin-top: 25px;
+    margin-top: 45px;
+    text-align: right;
   }
 
   article {
-    margin-top: 30px;
+    margin: 30px 0 0 auto;
     font-size: 24px;
     font-weight: 400;
     line-height: 1.7rem;
     max-width: 1000px;
+    text-align: right;
+    direction: rtl;
   }
 }
 
@@ -51,8 +55,10 @@
   display: flex;
   gap: 30px;
   align-items: flex-end;
+  flex-direction: row-reverse;
   img {
     width: 45%;
+    max-width: 1000px;
   }
   p {
     font-size: 22px;
@@ -68,10 +74,12 @@
   gap: 30px;
   img:nth-child(2) {
     width: 40%;
+    max-width: 907px;
   }
   img:nth-child(1) {
     margin-top: 65px;
     width: 16%;
+    max-width: 362px;
   }
 }
 
@@ -79,6 +87,7 @@
   display: flex;
   margin-top: 50px;
   position: relative;
+  flex-direction: row-reverse;
 }
 
 @media screen and (max-width: 1300px) {

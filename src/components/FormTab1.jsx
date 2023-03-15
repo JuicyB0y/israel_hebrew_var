@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import { useFormik } from 'formik';
 import emailjs from '@emailjs/browser';
 import * as Yup from 'yup';
+import axios from 'axios';
 
 import styles from './Form.module.scss';
 
 const FormTab1 = () => {
   const [formStatus, setFormStatus] = useState('');
-
-  const { t } = useTranslation();
 
   const formik = useFormik({
     initialValues: {
@@ -41,6 +40,19 @@ const FormTab1 = () => {
             setFormStatus('');
           }, 4000);
         });
+
+        // код Тёмы
+        let fData = new FormData();
+
+        fData.append('name', values.name);
+        fData.append('email', values.email);
+        fData.append('number', values.number);
+        fData.append('budget', values.budget);
+        fData.append('terms', values.terms);
+        fData.append('text', values.text);
+
+        axios.post('http://localhost/israel_project-main/src/php/form-db.php', fData);
+        //
       } catch (error) {
         console.log(error);
         setFormStatus('failure');
@@ -68,22 +80,14 @@ const FormTab1 = () => {
   // },
 
   return (
-    <form /* className={styles.form} */ onSubmit={formik.handleSubmit}>
-      {/* <h3 className={styles.title}>{t('form_name')}</h3>
-
-      <div className={styles.formHeader}>
-        <p>Project start</p>
-        <p>Get on the team</p>
-        <p>Cooperation</p>
-      </div> */}
-
+    <form onSubmit={formik.handleSubmit}>
       <div className={styles.input__wrapper}>
         <div className={styles.input__element}>
           <input
             className={styles.input}
             name="name"
             required
-            placeholder={t('form_name1')}
+            placeholder="טלפון"
             type="text"
             value={formik.values.name}
             onChange={formik.handleChange}
@@ -96,7 +100,7 @@ const FormTab1 = () => {
             className={styles.input}
             name="email"
             required
-            placeholder={t('form_email')}
+            placeholder="דוא”ל"
             type="email"
             value={formik.values.email}
             onChange={formik.handleChange}
@@ -111,7 +115,7 @@ const FormTab1 = () => {
             className={styles.input}
             name="number"
             required
-            placeholder={t('form_number')}
+            placeholder="שם"
             type="number"
             value={formik.values.number}
             onChange={formik.handleChange}
@@ -125,49 +129,44 @@ const FormTab1 = () => {
 
       <div className={styles.select__wrapper}>
         <div>
-          <label htmlFor="budget">{t('form_budget')}</label>
+          <label htmlFor="budget">בחר</label>
           <select
             name="budget"
             id="budget"
             value={formik.values.budget}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}>
-            <option value="" disabled="disabled">
-              {t('form_budget_select')}
-            </option>
-            <option value={t('form_budget_big')}>{t('form_budget_big')}</option>
-            <option value={t('form_budget_big1')}>{t('form_budget_big1')}</option>
-            <option value={t('form_budget_big2')}>{t('form_budget_big2')}</option>
-            <option value={t('form_budget_big3')}>{t('form_budget_big3')}</option>
+            <option value="less than $10,000">less than $10,000</option>
+            <option value="from $10,000 to $20,000">from $10,000 to $20,000</option>
+            <option value="from $20,000 to $30,000">from $20,000 to $30,000</option>
+            <option value="from $30,000 to $100,000">from $30,000 to $100,000</option>
           </select>
         </div>
         <div>
-          <label htmlFor="terms">{t('form_terms')}</label>
+          <label htmlFor="terms">תקציב</label>
           <select
             name="terms"
             id="terms"
             value={formik.values.terms}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}>
-            <option value="" disabled="disabled">
-              {t('form_terms_select')}
-            </option>
-            <option value={t('popup_2dan')}>{t('popup_2dan')}</option>
-            <option value={t('popup_3dan')}>{t('popup_3dan')}</option>
-            <option value={t('popup_3d')}>{t('popup_3d')}</option>
-            <option value={t('popup_logos')}>{t('popup_logos')}</option>
-            <option value={t('popup_corp')}>{t('popup_corp')}</option>
-            <option value={t('popup_photo')}>{t('popup_photo')}</option>
-            <option value={t('popup_web')}>{t('popup_web')}</option>
+            <option value="2D Animation">2D Animation</option>
+            <option value="3D Animation">3D Animation</option>
+            <option value="3D visualizations">3D visualizations</option>
+            <option value="Logos">Logos</option>
+            <option value="Corporate identity">Corporate identity</option>
+            <option value="Photo retouching">Photo retouching</option>
+            <option value="Web development">Web development</option>
           </select>
         </div>
       </div>
       <div className={styles.textarea__wrapper}>
-        <label htmlFor="text">{t('forms_comment')}</label>
+        <label htmlFor="text">הערות</label>
         <textarea
           className={styles.textarea}
           name="text"
           id="text"
+          placeholder="ספר לנו איזה סוג של פרויקט אתה צריך, תאר את הפרטים או שאל שאלה"
           value={formik.values.text}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
@@ -178,7 +177,7 @@ const FormTab1 = () => {
       </div>
       <div className={styles.button_rapper}>
         <button disabled={formik.isSubmitting} className={styles.button} type="submit">
-          {t('forms_button')}
+          שלח
         </button>
         {formStatus === 'success' && <div className={styles.success}>We contact with you soon!</div>}
         {formStatus === 'failure' && <div className={styles.failure}>Something wrong, try again Please</div>}

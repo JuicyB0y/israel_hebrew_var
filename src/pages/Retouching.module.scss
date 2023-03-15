@@ -11,6 +11,7 @@
   font-weight: 800;
   background-size: contain;
   line-height: 5rem;
+  text-align: right;
   filter: drop-shadow(0 5px 3px #bfccd8);
   -webkit-background-clip: text;
   &::before {
@@ -48,6 +49,7 @@
   display: flex;
   justify-content: space-between;
   margin: 30px 0;
+  flex-direction: row-reverse;
 
   & span {
     display: flex;
@@ -89,9 +91,11 @@
   margin-top: 30px;
   justify-content: space-between;
   gap: 30px;
+  flex-direction: row-reverse;
 
   &_left {
     max-width: 750px;
+    text-align: right;
 
     & h4 {
       font-size: 30px;
@@ -107,13 +111,17 @@
   }
 
   &_right {
-    margin-right: 100px;
-    min-width: 310px;
+    margin-left: 50px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
     & div {
       display: flex;
+      flex-direction: row-reverse;
       align-items: center;
-      width: 104%;
+      width: 111%;
 
       & a {
         font-size: 25px;
@@ -121,16 +129,19 @@
         color: #c8d9e9;
         border-bottom: 3px solid #c8d9e9;
       }
-      & img {
-        margin-left: 7px;
+      img {
+        margin-right: 16px;
         width: 20px;
         height: 20px;
         animation: leftRight 2s ease infinite;
       }
     }
     & p {
+      display: flex;
+      justify-content: flex-end;
+      text-align: right;
       font-size: 18px;
-      max-width: 280px;
+      // max-width: 280px;
       margin-top: 8px;
     }
   }
@@ -143,6 +154,7 @@
   // max-width: 800px;
   max-width: 100%;
   margin-top: 30px;
+  flex-direction: row-reverse;
 
   // добавил новое
   gap: 30px;
@@ -161,25 +173,7 @@
 .vis1 {
   position: absolute;
 }
-.painting {
-  top: -122px;
-  right: -5px;
-  width: 200px;
-  height: 200px;
-  z-index: 10;
-}
-.marker {
-  top: 107px;
-  right: 55px;
-  width: 200px;
-  height: 200px;
-}
-.book {
-  bottom: -179px;
-  right: 225px;
-  width: 150px;
-  height: 150px;
-}
+
 .paints {
   bottom: -188px;
   right: 455px;
@@ -190,13 +184,13 @@
   width: 200px;
   height: 200px;
   top: 300px;
-  right: -20px;
+  left: -20px;
 }
 .ph_flash {
   width: 200px;
   height: 200px;
   top: 1000px;
-  right: 100px;
+  left: 100px;
 }
 .web_icon {
   width: 100px;
@@ -232,11 +226,12 @@
 .card {
   position: relative;
   margin-top: 15px;
-  // max-width: 340px;
+  max-width: 340px;
 
   max-width: 40%;
 
   margin-right: 30px;
+  text-align: right;
 
   &_name {
     font-size: 20px;
@@ -246,7 +241,7 @@
   }
 
   &_text {
-    margin-top: 10px;
+    margin: 10px 0 0 auto;
     font-size: 18px;
     font-weight: 600;
     line-height: 1.4rem;
@@ -276,7 +271,7 @@
   &_subtitleStatic {
     font-size: 40px;
     font-weight: 700;
-    margin-bottom: 45px;
+    margin: 0 0 45px auto;
   }
 
   &_onlyCarousel {
@@ -303,7 +298,7 @@
     }
 
     img:nth-child(2) {
-      width: 52%;
+      width: 55%;
       object-fit: cover;
       border-radius: 32px;
     }
@@ -429,6 +424,7 @@
   &_miniWrapper {
     display: flex;
     position: relative;
+    text-align: right;
   }
 }
 
@@ -476,6 +472,7 @@
 .form {
   display: flex;
   margin-top: 50px;
+  flex-direction: row-reverse;
 }
 
 //
@@ -515,6 +512,32 @@
   animation-play-state: paused;
 }
 
+@media screen and (min-width: 1600px) {
+  // .bigWrapper {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  // }
+
+  // .works_onlyCarousel {
+  //   display: flex;
+  //   margin-right: 20px;
+  // }
+
+  .works_onlyCarouselParfume {
+    img:nth-child(1) {
+      width: 519px;
+      object-fit: cover;
+      border-radius: 32px;
+    }
+
+    img:nth-child(2) {
+      width: 698px;
+      object-fit: cover;
+      border-radius: 32px;
+    }
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .service {
     & span {
@@ -549,19 +572,20 @@
 
   .info_right {
     margin-right: 0;
+    margin-top: 30px;
   }
 
   .ph_emoji {
     width: 150px;
     height: 150px;
     top: 400px;
-    right: -20px;
+    left: -20px;
   }
   .ph_flash {
     width: 150px;
     height: 150px;
     top: 1000px;
-    right: 100px;
+    left: 100px;
   }
 
   .form {
@@ -648,6 +672,7 @@
   }
 
   .info_right {
+    margin-left: -25px;
     div {
       a {
         font-size: 19px;
@@ -693,7 +718,7 @@
     width: 100px;
     height: 100px;
     top: 1100px;
-    right: 20px;
+    left: 20px;
   }
   .icons3d {
     width: 80px;
@@ -776,6 +801,7 @@
   }
 
   .info_right {
+    margin-left: -65px;
     div {
       a {
         font-size: 15px;
@@ -798,6 +824,34 @@
       width: 100%;
     }
   }
+
+  .works_onlyCarouselParfume {
+    img:nth-child(1) {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 32px;
+    }
+
+    img:nth-child(2) {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 32px;
+    }
+  }
+
+  // .works_onlyCarouselParfume {
+  //   img:nth-child(1) {
+  //     width: 100%;
+  //     object-fit: cover;
+  //     border-radius: 32px;
+  //   }
+
+  //   img:nth-child(2) {
+  //     width: 100%;
+  //     object-fit: cover;
+  //     border-radius: 32px;
+  //   }
+  // }
 
   .web_icon {
     width: 100px;
@@ -927,7 +981,7 @@
     width: 100px;
     height: 100px;
     top: 590px;
-    right: -20px;
+    left: -20px;
   }
   .web_icon {
     width: 100px;
@@ -1033,26 +1087,13 @@
 
   .card {
     display: block;
-    max-width: 80%;
+    max-width: 100%;
+    margin: 0 0 0 auto;
   }
 
   .article {
     max-width: 90%;
     margin-top: 20px;
-  }
-
-  .works_onlyCarouselParfume {
-    img:nth-child(1) {
-      width: 100%;
-      object-fit: cover;
-      border-radius: 32px;
-    }
-
-    img:nth-child(2) {
-      width: 100%;
-      object-fit: cover;
-      border-radius: 32px;
-    }
   }
 
   // .form {
@@ -1070,8 +1111,10 @@
     margin-bottom: 25px;
   }
 
-  .info_right3d {
-    margin: 15px 0 0 0;
+  .info_right {
+    display: block;
+    margin-right: 38px;
+    min-width: auto;
   }
 
   .dots_wrapper {
@@ -1083,14 +1126,14 @@
     width: 100px;
     height: 100px;
     top: 680px;
-    right: -20px;
+    left: -20px;
     z-index: 1;
   }
   .ph_flash {
     width: 70px;
     height: 70px;
     top: 1600px;
-    right: 20px;
+    left: 20px;
   }
   .icons3d {
     width: 60px;
@@ -1114,7 +1157,7 @@
   }
 
   .card {
-    max-width: 90%;
+    // max-width: 90%;
   }
 
   .detailList {

@@ -63,8 +63,8 @@ const Header = ({ setOpened, opened }) => {
   };
 
   return (
-    <div className={`${styles.wrapper} ${theme === 'reversed' ? styles.wrapper_reversed : ''}`}>
-      <div className={`${styles.first__section} ${theme === 'reversed' ? styles.first__section_reversed : ''}`}>
+    <div className={styles.wrapper}>
+      <div className={styles.first__section}>
         <div className={styles.bar__bigwrapper}>
           {/* <div className={styles.flags}>
             <LanguageFlags />
@@ -75,23 +75,23 @@ const Header = ({ setOpened, opened }) => {
             <div className={`${opened ? styles.change3 : ''} ${styles.bar3}`}></div>
           </div>
         </div>
-        <div className={`${styles.sections} ${theme === 'reversed' ? styles.sections_reversed : ''}`}>
+        <div className={styles.sections}>
           <div ref={ref} /* style={{ left: leftRef, width: widthRef }} */ className={styles.marker}></div>
           <NavLink ref={firstRef} onClick={() => navActive(firstRef)} to="/" className={styles.design}>
             <img src={logo} alt="logo" />
             DESIGN ISRAEL
           </NavLink>
           <NavLink ref={secondRef} onClick={() => navActive(secondRef)} to="/services" className={styles.services}>
-            {t('header_services')}
+            שירותים
           </NavLink>
           <NavLink ref={thirdRef} onClick={() => navActive(thirdRef)} to="/cases" className={styles.services}>
-            {t('header_cases')}
+            הפרוייקטים שלנו
           </NavLink>
         </div>
       </div>
       <div className={`${styles.second__section} ${theme === 'reversed' ? styles.second__section_reversed : ''}`}>
         <a href="#" className={`${styles.button} ${theme === 'reversed' ? styles.button_reversed : ''}`}>
-          {t('header_client')}
+          להרשמה
         </a>
         {/* <LanguageFlags /> */}
       </div>

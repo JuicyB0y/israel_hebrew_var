@@ -28,34 +28,34 @@ const Popup = ({ setOpened, opened }) => {
           <div className={styles.middle}>
             <div className={styles.middle_top}>
               <NavLink to="/services" onClick={() => setOpened(false)} className={styles.middle_services}>
-                Services
+                שירותים
               </NavLink>
               <NavLink to="/cases" onClick={() => setOpened(false)} className={styles.middle_services}>
-                Cases
+                הפרוייקטים שלנו
               </NavLink>
             </div>
             <hr />
             <div className={styles.middle_left}>
               <Link to="/animation" onClick={() => setOpened(false)}>
-                {t('popup_2dan')}
+                אנימציה 2D
               </Link>
               <Link to="/animation" onClick={() => setOpened(false)}>
-                {t('popup_3dan')}
+                אנימציה 3D
               </Link>
               <Link to="/3dvisualization" onClick={() => setOpened(false)}>
-                {t('popup_3d')}
+                3D ויזואליזציה
               </Link>
               <Link to="/logos" onClick={() => setOpened(false)}>
-                {t('popup_logos')}
+                עיצוב לוגו
               </Link>
               <Link to="/logos" onClick={() => setOpened(false)}>
-                {t('popup_corp')}
+                Corporate identity
               </Link>
               <Link to="/retouching" onClick={() => setOpened(false)}>
-                {t('popup_photo')}
+                ריטוש תמונות
               </Link>
               <Link to="/webdevelopment" onClick={() => setOpened(false)}>
-                {t('popup_web')}
+                בניית אתרים
               </Link>
             </div>
             {/* <div className={styles.middle_center}>
@@ -64,13 +64,13 @@ const Popup = ({ setOpened, opened }) => {
               <div>{t('popup_reviews')}</div>
             </div> */}
             <div className={styles.middle_right}>
-              <div className={styles.middle_project}>{t('popup_discuss')}</div>
+              <div className={styles.middle_project}>צור קשר</div>
               <div className={styles.middle_mail}>Jerusalem@mail.ru</div>
               <div className={styles.middle_phone}>+7 (932) 213-45-63</div>
               <a href="#" className={styles.button}>
-                {t('header_client')}
+                להרשמה
               </a>
-              <div className={styles.middle_cooperation}>{t('popup_coop')}</div>
+              <div className={styles.middle_cooperation}>Cooperation</div>
               <div className={styles.middle_lastmail}>Jerusalem@mail.ru</div>
             </div>
           </div>

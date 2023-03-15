@@ -65,13 +65,13 @@ const Cases = () => {
   const [selectedCategory, setSelectedCategory] = useState([]);
 
   const types = [
-    { type: 'All Cases', name: t('cases_all') },
-    { type: 'Animation', name: t('cases_anim') },
-    { type: '3D visualization', name: t('3D visualization') },
+    { type: 'All Cases', name: 'הפרוייקטים שלנו' },
+    { type: 'Animation', name: 'אנימציה' },
+    { type: '3D visualization', name: ' ויזואליזציה' },
     // { type: 'Graphic & design', name: t('cases_design') },
-    { type: 'Logos', name: t('cases_logos') },
-    { type: 'Retouching', name: t('cases_retouche') },
-    { type: 'Web Development', name: t('cases_dev') },
+    { type: 'Logos', name: 'עיצוב לוגו' },
+    { type: 'Retouching', name: 'ריטוש תמונות' },
+    { type: 'Web Development', name: 'בניית אתרים' },
   ];
 
   const popupRef = React.useRef(null);

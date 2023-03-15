@@ -25,7 +25,7 @@ const SmsChain = () => {
       <section className={styles.topSection}>
         <div className={styles.image}>
           <img src={headerImg} alt="bgImage" /* className={styles.image} */ />
-          <h1>{t('sms_header')}</h1>
+          <h1>SMS Chain אנימציית המוצר</h1>
         </div>
         <div className={styles.article}>
           <div className={styles.icons}>
@@ -42,10 +42,10 @@ const SmsChain = () => {
         </div>
       </section>
       <section className={styles.description}>
-        <div className={styles.subheader}>{t('sturm_subtitle')}</div>
-        <p>{t('sms_taskText')}</p>
+        <div className={styles.subheader}>משימה</div>
+        <p>לפתח אנימציית מוצר עבור פרויקט ICO SMS Chain.</p>
 
-        <div className={styles.subheader}>{t('startup_ill')}</div>
+        <div className={styles.subheader}>איורים</div>
         <div className={styles.wrapper3d}>
           <img src={sms_1} alt="sms_1" />
           <img src={sms_2} alt="sms_2" />
@@ -56,7 +56,7 @@ const SmsChain = () => {
           <img src={sms_7} alt="sms_7" />
         </div>
 
-        <div className={styles.subheader}>{t('servPage_result')}</div>
+        <div className={styles.subheader}>תוצאה</div>
         <div className={styles.videoWrapper}>
           <ReactPlayer
             url="https://vimeo.com/239242832"
@@ -66,7 +66,7 @@ const SmsChain = () => {
             // config={{ vimeo: { playerOptions: { background: true } } }}
             config={{
               vimeo: {
-                playerOptions: { byline: true, controls: true },
+                playerOptions: { byline: true, controls: true, playsinline: false, iframeParams: { fullscreen: 0 } },
               },
             }}
             className={styles.video}

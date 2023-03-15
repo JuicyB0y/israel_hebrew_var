@@ -13,7 +13,6 @@ import design from '../assets/art_design.png';
 import brochures from '../assets/brochures.png';
 import calendar from '../assets/calendar.png';
 import rabbit from '../assets/rabbit.png';
-import { useTranslation } from 'react-i18next';
 
 // const OnlyImages = [african, house, parfume];
 
@@ -38,24 +37,22 @@ const BottomImages = [
 ];
 
 const Logos = () => {
-  const { t } = useTranslation();
-
   const notesArr = [
     {
-      name: t('logos_company'),
-      text: t('logos_comText'),
+      name: 'המוצר',
+      text: 'אנו מפתחים לוגו וסגנון למוצרים חדשים ועוזרים לתת חיים חדשים למוצרים הישנים.',
     },
     {
-      name: t('logos_product'),
-      text: t('logos_prodText'),
+      name: 'החברה שלנו',
+      text: 'אנו הופכים את החברה למובנת יותר עבור הלקוחות ומזוהה בשוק. נתקן את המותג הנוכחי או ניצור תמונה חדשה.',
     },
     {
-      name: t('logos_employers'),
-      text: t('logos_emplText'),
+      name: 'אירועים',
+      text: 'אנו מפתחים את הקונספט והזיהוי החזותי לאירועים ופועלים בכל אמצעי התקשורת.',
     },
     {
-      name: t('logos_event'),
-      text: t('logos_evText'),
+      name: 'תדמית המעסיק',
+      text: 'אנו עוזרים לחברות למשוך ולשמר אנשים עם הכישורים והערכים הנכונים.',
     },
   ];
 
@@ -69,11 +66,13 @@ const Logos = () => {
   //   { count: '6.', info: 'Brand book preparation' },
   // ];
 
-  const headerText = t('logos_header');
-  const sectionTitle = t('logos_subheader');
-  const firstText = t('logos_text');
-  const secondText = t('logos_botText');
-  const resultText = t('logos_resultText');
+  const headerText = 'לוגו וזהות תאגידית';
+  const sectionTitle = 'הסוכנות כוללת צוות המתמחה במיתוג: פיתוח לוגואים, זהויות ומדיה ארגונית.';
+  const firstText =
+    'פיתוח עיצוב עבורנו אינו רק יצירת אריזה יפה למוצרים שלך, אלא גם הגדלת היעילות של שיפור היעילות העסקית.';
+  const secondText =
+    'הסטודיו שלנו מספק מגוון רחב של שירותי עיצוב יצירתי לעסקים ולשיווק.  פרויקטים מורכבים ומשימות נקודתיות שמתבצעות בהתאם ללקוח.';
+  const resultText = '';
 
   return (
     <div>

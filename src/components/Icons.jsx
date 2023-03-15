@@ -9,16 +9,18 @@ import telegram from '../assets/telegram-plane-svgrepo-com.svg';
 
 const Icons = () => {
   return (
-    <div className={styles.iconsWrapper}>
-      <Link className={styles.icon} to="#">
-        <img src={insta} alt="icon" />
-      </Link>
-      <Link className={styles.icon} to="#">
-        <img src={whatsapp} alt="icon" />
-      </Link>
-      <Link className={styles.icon} to="#">
-        <img src={telegram} alt="icon" />
-      </Link>
+    <div className={styles.mainWrapper}>
+      <div className={styles.iconsWrapper}>
+        <Link className={styles.icon} to="#">
+          <img src={insta} alt="icon" />
+        </Link>
+        <Link className={styles.icon} to="#">
+          <img src={whatsapp} alt="icon" />
+        </Link>
+        <Link className={styles.icon} to="#">
+          <img src={telegram} alt="icon" />
+        </Link>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 
 import Contacts from '../components/Contacts';
 import Form from '../components/Form';
@@ -11,22 +10,22 @@ import pack2 from '../assets/package_2.png';
 import pack3 from '../assets/package_3.png';
 
 const Package = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <div className={styles.wrapper}>
       <section className={styles.topSection}>
         <div className={styles.image}>
           <img src={headerImg} alt="bgImage" />
-          <h1>{t('package_header')}</h1>
+          <h1>עיצוב אריזות משקה</h1>
         </div>
       </section>
       <section className={styles.description}>
-        <h3>{t('sturm_subtitle')}</h3>
+        <h3>משימה</h3>
         <article>
-          <p>{t('package_text1')}</p>
+          <p>לפתח עיצוב תווית עבור ה-IPA עם השם "TWO GEESE".</p>
           <br /> <br />
-          <p>{t('package_text2')}</p>
+          <p>להשתמש בתמונה של שני אווזים וגופן עתיק , מתאים ברוחו לנושא.</p>
         </article>
         {/* <div className={styles.topImgWrapper}>
           <div className={styles.imageLittle}>
@@ -38,10 +37,10 @@ const Package = () => {
             <p>Guernica, 1937</p>
           </div>
         </div> */}
-        <h3>{t('servPage_result')}</h3>
+        <h3>תוצאה</h3>
         <div className={styles.topWrapper}>
           <img src={pack1} alt="image" />
-          <p>{t('package_label')}</p>
+          <p>label “two geese”</p>
         </div>
         <div className={styles.botWrapper}>
           <img src={pack2} alt="image" />

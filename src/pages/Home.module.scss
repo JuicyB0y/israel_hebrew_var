@@ -128,7 +128,7 @@
   }
 }
 .title3 {
-  margin-left: 161px;
+  margin-right: 161px;
   background: rgb(37, 39, 42);
   background: linear-gradient(129deg, rgba(37, 39, 42, 1) 17%, rgba(75, 78, 84, 1) 50%, rgba(161, 168, 180, 1) 83%);
   -webkit-background-clip: text;
@@ -140,7 +140,6 @@
 
   &_reversed {
     margin-left: 0;
-    margin-right: 161px;
   }
 }
 
@@ -154,16 +153,20 @@
 }
 .heart {
   top: -5px;
-  left: 321px;
+  // left: 571px;
+  left: 36%;
 }
 .emoji {
-  bottom: -11px;
-  left: 584px;
+  bottom: -16px;
+  // left: 384px;
+  left: 25%;
 }
 .flag1 {
-  right: 151px;
-  top: -107px;
+  left: 0px;
+  top: -55px;
   z-index: 1;
+  width: 350px;
+  height: 350px;
   // box-shadow: 10px 5px 5px rgb(73, 73, 73);
   // overflow: hidden;
 }
@@ -176,7 +179,8 @@
 
 .text {
   margin-top: 45px;
-  margin-left: 200px;
+  margin-left: auto;
+  margin-right: 20%;
   font-size: 20px;
   font-weight: 500;
   max-width: 750px;
@@ -184,31 +188,54 @@
 
   &_reversed {
     text-align: right;
+    direction: rtl;
   }
 }
 
 .form {
   display: flex;
+  flex-direction: row-reverse;
   margin-top: 100px;
   margin-bottom: 150px;
 }
 
 @media screen and (max-width: 1300px) {
   .form {
-    display: block;
+    // display: block;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .text {
+    margin-right: 161px;
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
   .flag1 {
-    display: none;
+    width: 250px;
+    height: 250px;
+    // display: none;
+  }
+  .heart {
+    width: 130px;
+    height: 130px;
+    top: 50px;
+    left: 31%;
+  }
+  .emoji {
+    bottom: 30px;
+    width: 130px;
+    height: 130px;
+    left: 4%;
   }
 }
 
 @media screen and (max-width: 1000px) {
   .emoji {
-    bottom: -11px;
-    left: 504px;
+    bottom: 0px;
   }
   .flag2 {
     width: 80px;
@@ -216,6 +243,10 @@
     right: 75px;
     bottom: 303px;
     left: auto;
+  }
+
+  .heart {
+    top: 93px;
   }
 
   .form {
@@ -241,15 +272,22 @@
     font-size: 95px;
   }
 
+  .flag1 {
+    width: 200px;
+    height: 200px;
+    // display: none;
+  }
+
   .title1 {
     margin: 0;
     align-self: start;
   }
 
   .heart {
-    left: 329px;
-    width: 180px;
-    height: 180px;
+    left: 25%;
+    width: 100px;
+    height: 100px;
+    top: 119px;
   }
   .emoji {
     display: none;
@@ -261,6 +299,7 @@
     justify-content: flex-end;
     align-self: end;
     max-width: 80%;
+    margin-right: 50px;
   }
 }
 
@@ -280,10 +319,14 @@
     margin-left: 22%;
   }
 
-  .heart {
-    left: 230px;
+  .flag1 {
     width: 140px;
     height: 140px;
+    top: 6px;
+  }
+
+  .heart {
+    display: none;
   }
   .emoji {
     bottom: -11px;
@@ -300,6 +343,7 @@
   .text {
     max-width: 90%;
     margin-top: 25px;
+    margin-right: 20px;
   }
 
   .form {
@@ -315,7 +359,8 @@
     margin-left: 7%;
   }
   .title3 {
-    margin-left: 11%;
+    // margin-left: 11%;
+    margin-left: auto;
   }
 
   .heart {
@@ -328,8 +373,15 @@
     right: 9px;
   }
 
+  .flag1 {
+    width: 100px;
+    height: 100px;
+    top: 6px;
+  }
+
   .text {
     max-width: 100%;
     margin-top: 25px;
+    margin-right: 0;
   }
 }

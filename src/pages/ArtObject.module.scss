@@ -7,7 +7,7 @@
   margin-left: -50px;
   margin-top: -15px;
   margin-right: -50px;
-  border-radius: 50px 0 0 0;
+  border-radius: 0 50px 0 0;
   overflow: hidden;
   img {
     width: 100%;
@@ -17,15 +17,17 @@
   h1 {
     position: absolute;
     bottom: 0;
-    left: 70px;
+    right: 70px;
     color: #fff;
     font-size: 80px;
+    text-align: right;
   }
 }
 
 .description {
   margin-top: 55px;
   position: relative;
+  text-align: right;
 
   h3 {
     font-size: 40px;
@@ -33,11 +35,12 @@
   }
 
   article {
-    margin-top: 30px;
+    margin: 30px 0 0 auto;
     font-size: 24px;
     font-weight: 400;
     line-height: 1.7rem;
     max-width: 1000px;
+    direction: rtl;
   }
 }
 
@@ -48,6 +51,9 @@
   justify-content: space-between;
   margin-top: 40px;
   gap: 30px;
+  max-width: 2500px;
+  margin-left: auto;
+  margin-right: auto;
 
   img {
     width: 45%;
@@ -55,21 +61,24 @@
 
   &_name {
     font-size: 40px;
-    margin-top: 30px;
+    margin: 30px 0 0 auto;
+    text-align: right;
   }
 
   &_text {
-    margin-top: 20px;
+    margin: 20px 0 0 auto;
     font-size: 24px;
     font-weight: 400;
     line-height: 1.7rem;
     max-width: 1000px;
+    text-align: right;
   }
 }
 
 .form {
   display: flex;
   margin-top: 50px;
+  flex-direction: row-reverse;
 }
 
 @media screen and (max-width: 1300px) {

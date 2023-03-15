@@ -27,6 +27,7 @@ import parf1 from '../assets/t_ford1.png';
 import parf2 from '../assets/t_ford2.png';
 import pen1 from '../assets/pen_eye_1.png';
 import pen2 from '../assets/pen_eye_2.png';
+import left2 from '../assets/left-bold.png';
 
 import ph_emoji from '../assets/photo_emoji.png';
 import ph_flash from '../assets/photo_flash.png';
@@ -46,55 +47,57 @@ const Retouching = () => {
 
   const notesArr = [
     {
-      name: t('retouche_online'),
-      text: t('retouche_onlineText'),
+      name: 'ריטוש דיוקן',
+      text: 'טיפול בצילומי פורטרט להסרת פגמים קיימים בתמונה ריטוש זה כולל',
       list: [
-        t('retouche_list1'),
-        t('retouche_list2'),
-        t('retouche_list3'),
-        t('retouche_list4'),
-        t('retouche_list5'),
-        t('retouche_list6'),
-        t('retouche_list7'),
+        ' תיקון צבע *',
+        ' פלסטי *',
+        ' הסרת אקנה, חבורות ופגמים נוספים בתמונה *',
+        ' ניקוי רקע, גזירה במידת הצורך *',
+        ' החלקת עור *',
       ],
     },
     {
-      name: t('retouche_port'),
-      text: t('retouche_portText'),
+      name: 'ריטוש לחנויות אונליין וקטלוגים',
+      text: 'עיבוד תפעולי וריטוש של כל כמות תמונות לקטלוג החנות המקוונת',
       list: [
-        t('retouche_portList1'),
-        t('retouche_portList2'),
-        t('retouche_portList3'),
-        t('retouche_portList4'),
-        t('retouche_portList5'),
-      ],
-    },
-
-    {
-      name: t('retouche_correct'),
-      text: t('retouche_correctText'),
-      list: [
-        t('retouche_correctList1'),
-        t('retouche_correctList2'),
-        t('retouche_correctList3'),
-        t('retouche_correctList4'),
-        t('retouche_correctList5'),
-        t('retouche_correctList6'),
+        'תיקון צבע *',
+        'ניקוי רקע, גזירה *',
+        'הסרת אקנה, חבורות ופגמים נוספים בתמונה *',
+        'הסרת פגמים במוצר *',
+        'החלקת עור יסודית *',
+        'עבודה עם צללים *',
+        'שינויים אסטתיים *',
       ],
     },
 
     {
-      name: t('retouche_jewel'),
-      text: t('retouche_jewelText'),
+      name: 'ריטוש תמונות תכשיטים',
+      text: 'פיתוח ריטוש תקני בהתאמה אישית לדרישותיכם וריטוש צילומי תכשיטים עם הכנה להדפסת קטלוג וחנות מקוונת',
       list: [
-        t('retouche_jewelList1'),
-        t('retouche_jewelList2'),
-        t('retouche_jewelList3'),
-        t('retouche_jewelList4'),
-        t('retouche_jewelList5'),
-        t('retouche_jewelList6'),
-        t('retouche_jewelList7'),
-        t('retouche_jewelList8'),
+        'תיקון צבע *',
+        'הסרת סנוור והשתקפויות נוספות *',
+        'גזירת רקע *',
+        'יישור עומק וניגודיות של השתקפויות, צללים והארות *',
+        'ניקוי גוונים לא רצויים על מתכות ואבנים *',
+        'הגדרת זווית הטיה ומיקום במסגרת *',
+        'ציור חיתוך אבנים והדגשות עליהם *',
+        'ציור צללית בפורמט יחיד *',
+      ],
+    },
+
+    {
+      name: 'חבילת עריכת תמונות',
+      text: ':הבאת סדרת תמונות לסטנדרט אחד. כולל',
+      list: [
+        ' איזון לבן *',
+        'HSL *',
+        'תיקון אור ועיוות *',
+        'סטיות כרומטיות *',
+        'ניגודיות *',
+        'חיתוך תמונה *',
+        'רוויה *',
+        'מברשות *',
       ],
     },
   ];
@@ -119,8 +122,8 @@ const Retouching = () => {
       <img className={styles.ph_emoji} src={ph_emoji} alt="ph_emoji" />
       <img className={styles.ph_flash} src={ph_flash} alt="ph_flash" />
 
-      <h1 className={styles.title} data-heading={headerText}>
-        {headerText}
+      <h1 className={styles.title} data-heading="ריטוש תמונות">
+        ריטוש תמונות
       </h1>
       <div className={styles.service}>
         <span>{t('servPage_service')}</span>
@@ -139,13 +142,17 @@ const Retouching = () => {
       <hr />
       <section className={styles.info}>
         <article className={styles.info_left}>
-          <h4>{sectionTitle}</h4>
-          <p>{firstText}</p>
+          <h4>?למה יש צורך בריטוש תמונות</h4>
+          <p>
+            ריטוש תמונה מאפשר להסיר פגמים שונים הנראים בתמונה ולהפוך את התמונה לעמוקה, עשירה ויפה יותר. לרוב, ריטוש משמש
+            בצילומי פורטרט - לפורטרטים בתקריב, צילומי אובייקטים לקטלוגים , פרסומות וכן בכל צילום פרסומי אחר. ללא קשר
+            לאיכות חומר המקור (ואיכות הארגון וההתנהלות של הצילום), ריטוש תמונות הוא שלב חובה בייצור מוצרי צילום.
+          </p>
         </article>
         <aside className={styles.info_right}>
           <div>
-            <a href="#">{t('servPage_arrow')}</a>
-            <img src={arrow} alt="arrow" />
+            <a href="#">תשאיר את הבקשה שלך</a>
+            <img src={left2} alt="arrow" />
           </div>
           <p>{t('servPage_arrText')}</p>
         </aside>
@@ -188,7 +195,7 @@ const Retouching = () => {
 
         {/* это статичные фотки */}
         <div className={styles.works_miniWrapper}>
-          <h3 className={styles.works_subtitleStatic}>{t('servPage_examples')}</h3>
+          <h3 className={styles.works_subtitleStatic}>לדוגמא</h3>
         </div>
         <div className={styles.works_onlyCarousel}>
           <img src={woman1} alt="image" />

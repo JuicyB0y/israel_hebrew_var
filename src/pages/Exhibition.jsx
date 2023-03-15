@@ -1,16 +1,8 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 
 import Contacts from '../components/Contacts';
 import Form from '../components/Form';
 import styles from './Exhibition.module.scss';
-
-import little1 from '../assets/dali_little1.png';
-import little2 from '../assets/dali_little2.png';
-import res1 from '../assets/dali_res1.png';
-import res2 from '../assets/dali_res2.png';
-import res3 from '../assets/dali_res3.png';
-import res4 from '../assets/dali_res4.png';
 
 import headerImg from '../assets/poster_main.png';
 import poster_1 from '../assets/poster_little1.png';
@@ -25,22 +17,20 @@ import pack2 from '../assets/package_2.png';
 import pack3 from '../assets/package_3.png';
 
 const Exhibition = () => {
-  const { t } = useTranslation();
-
   return (
     <div className={styles.wrapper}>
       <section className={styles.topSection}>
         <div className={styles.image}>
           <img src={headerImg} alt="bgImage" />
-          <h1>{t('exhibition_header')}</h1>
+          <h1>כרזת התערוכה</h1>
         </div>
       </section>
       <section className={styles.description}>
-        <h3>{t('sturm_subtitle')}</h3>
+        <h3>משימה</h3>
         <article>
-          <p>{t('exhibition_text1')}</p>
+          <p>להכין פוסטר לאירוע על מעצבי old and new school.</p>
           <br /> <br />
-          <p>{t('exhibition_text2')}</p>
+          <p>להשתמש בעקרון העבודה של המעצבת תרזה רולר וסטודיו העיצוב CYAN.</p>
         </article>
 
         <div className={styles.topWrapper}>
@@ -51,12 +41,12 @@ const Exhibition = () => {
           <img src={poster_5} alt="image" />
         </div>
         <div className={styles.imageText}>
-          <p>{t('exhibition_option')}</p>
+          <p>options offered to the customer</p>
         </div>
-        <h3>{t('servPage_result')}</h3>
+        <h3>תוצאה</h3>
         <div className={styles.botWrapper}>
           <img src={result} alt="image" />
-          <p>{t('exhibition_res')}</p>
+          <p>customer approved result</p>
         </div>
       </section>
       <div className={styles.form}>

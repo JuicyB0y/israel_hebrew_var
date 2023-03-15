@@ -19,6 +19,7 @@ import vis3 from '../assets//3d_3.png';
 import vis4 from '../assets//3d_4.png';
 import vis5 from '../assets//3d_5.png';
 import tree from '../assets/3d_2.png';
+import left2 from '../assets/left-bold.png';
 
 import insta from '../assets/instagram-svgrepo-com.svg';
 import whatsapp from '../assets/whatsapp-svgrepo-com.svg';
@@ -95,21 +96,21 @@ const Visualisation3D = () => {
 
   const detailedList = [
     {
-      count: '1.',
-      info: t('vis_stagesName1'),
-      text: t('vis_stagesText1'),
+      count: '.1',
+      info: 'הצעה מסחרית',
+      text: 'אתם שולחים לנו חומרים על הפרויקט (תכניות קומה , תוכניות חזית וגינון). אנו עובדים ומגבשים הצעת מחיר מסחרית .',
       image: vis3,
     },
     {
-      count: '2.',
-      info: t('vis_stagesName2'),
-      text: t('vis_stagesText2'),
+      count: '.2',
+      info: 'תוצאות ביניים',
+      text: 'במהלך יצירת הפרויקט ההדמיה התלת מימדית האדריכלית, אנו שולחים לכם תוצאות ביניים אותן אתם בודקים ובמידת הצורך מבצעים שינויים משלכם.',
       image: vis4,
     },
     {
-      count: '3.',
-      info: t('vis_stagesName3'),
-      text: t('vis_stagesText3'),
+      count: '.3',
+      info: 'עיבודים סופיים',
+      text: 'אנו מבצעים את העיבוד הסופי של מתחם המגורים ושולחים לכם את התוצאה. אתם משלמים את יתרת הסכום עבור הפרויקט.',
       image: vis5,
     },
   ];
@@ -128,11 +129,11 @@ const Visualisation3D = () => {
     <div className={styles.wrapper}>
       <img className={styles.vis1} src={vis1} alt="vis1" />
 
-      <h1 className={styles.title} data-heading={t('vis_mainHeader')}>
-        {t('vis_mainHeader')}
+      <h1 className={styles.title} data-heading="3D visualization">
+        3D visualization
       </h1>
       <div className={styles.service}>
-        <span>{t('servPage_service')}</span>
+        <span>Service</span>
         <div className={styles.dots_wrapper}>
           <Link to="#">
             <img src={whatsapp} alt="whatsapp" />
@@ -148,35 +149,43 @@ const Visualisation3D = () => {
       <hr />
       <section className={styles.info}>
         <article className={styles.info_left}>
-          <h4>{t('vis_mainSubHeader')}</h4>
+          <h4>אנחנו יודעים איך להגדיל את המכירות שלך</h4>
           {/* <p>{t('vis_firstText')}</p> */}
         </article>
         <aside className={styles.info_right}>
           <div>
-            <a href="#">{t('servPage_arrow')}</a>
-            <img src={arrow} alt="arrow" />
+            <a href="#">תשאיר את הבקשה שלך</a>
+            <img src={left2} alt="arrow" />
           </div>
-          <p>{t('servPage_arrText')}</p>
+          <p>יעוץ חינם ונראה לך היכן להתחיל</p>
         </aside>
       </section>
 
       <section className={styles.cards}>
         <div className={styles.card}>
-          <span className={styles.card_name}>{t('vis_textHeader')}</span>
+          <span className={styles.card_name}>הדמיה תלת מימדית אדריכלית</span>
           <hr />
-          <article className={styles.card_text}>{t('vis_firstText')}</article>
+          <article className={styles.card_text}>
+            אנו יוצרים תוכן פרסומי למכירות אפקטיביות. אנו מציעים שירותים להדמיה אדריכלית באיכות גבוהה של שכונות קטנות ,
+            מתחמי מגורים, קוטג'ים, מבני ציבור, תעשייה ומנהלה. אנו נפתח דגם בעל רמת פירוט גבוהה ונראה את מתחם המגורים,
+            מרכז המסחרי, כל חפץ אחר שלך, רק מהזוויות הטובות ביותר.
+          </article>
         </div>
         <img src={tree} alt="tree" />
       </section>
       {/* <article className={styles.article}>{secondText}</article> */}
       <section className={styles.works}>
         {/* подробный stagesList*/}
-        <h3 className={styles.works_subtitle}>{t('servPage_stages')}</h3>
+        <h3 className={styles.works_subtitle}>שלבי עבודה</h3>
         <ol className={styles.detailList}>
           {detailedList.map((item) => (
             <li className={styles.detailList_item}>
-              <span>{item.count}</span> {item.info}
               {item.image !== undefined && <img src={item.image} className={styles.icons3d} alt="icon" />}
+              <span className={styles.inside}>
+                <span>{item.info}</span>
+                <span> {item.count}</span>
+              </span>
+
               <hr />
               <article>{item.text}</article>
             </li>
@@ -184,7 +193,7 @@ const Visualisation3D = () => {
         </ol>
 
         <div className={styles.works_miniWrapper}>
-          <h3 className={styles.works_subtitle}>{t('servPage_examples')}</h3>
+          <h3 className={styles.works_subtitle}>לדוגמא</h3>
         </div>
 
         {/* это статичные фотки */}

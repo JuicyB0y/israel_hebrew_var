@@ -26,8 +26,8 @@ const Sturmgraf = () => {
           <img src={mainBg} alt="bgImage" /* className={styles.image} */ />
         </div>
         <div className={styles.article}>
-          <h1>{t('sturm_header')}</h1>
-          <div className={styles.icons}>
+          <h1>לוגו לחנות של מוצרים לרכב “Sturmgraf”</h1>
+          {/* <div className={styles.icons}>
             <Link className={styles.icons_wrapper} to="#">
               <img src={facebook} alt="facebook" />
             </Link>
@@ -37,25 +37,26 @@ const Sturmgraf = () => {
             <Link className={styles.icons_wrapper} to="#">
               <img src={telegram} alt="telegram" />
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
       <section className={styles.description}>
-        <h3>{t('sturm_subtitle')}</h3>
+        <h3>משימה</h3>
         <article>
-          {t('sturm_taskText1')}
+          לפתח לוגו לחנות עם מוצרי רכב. כמו כן, החנות עוסקת בייצור ומכירה של מדבקות לרכב.
           <br />
-          {t('sturm_taskText2')}
+          הלקוח בחר את הארנב מהסרט המצויר "החיים הסודיים של חיות המחמד" כסמל למותג שלו . הלקוח רצה לוגו צבעוני וקליט.
         </article>
         <div className={styles.graffiti_wrapper}>
           <img src={graffiti} alt="graffiti" />
         </div>
-        <h3>{t('sturm_decision')}</h3>
+        <h3>פתרון</h3>
         <article>
-          {t('sturm_decisionText1')} <br />
-          {t('sturm_decisionText2')}
+          פני הלוגו הם ארנב
           <br />
-          {t('sturm_decisionText3')}
+          פרטים כמו רגש ומיקומו של הארנב נחלטו עם הלקוח מראש.
+          <br />
+          השתמשנו בגופן «tag type» בהשראת תגי גרפיטי.
         </article>
         <div className={styles.markup}>
           <div className={styles.markup_one}>
@@ -68,7 +69,7 @@ const Sturmgraf = () => {
         <div className={styles.logo_images}>
           <img src={rabbits} alt="rabbits" />
         </div>
-        <h3>{t('sturm_merch')}</h3>
+        <h3>מותג</h3>
         <div className={styles.logo_images}>
           <img src={shirts} alt="shirts" />
         </div>

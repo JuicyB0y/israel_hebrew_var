@@ -22,6 +22,8 @@ import anim_1 from '../assets/animate_1.png';
 import anim_2 from '../assets/animate_2.png';
 import anim_3 from '../assets/animate_3.png';
 import anim_4 from '../assets/animate_4.png';
+import left from '../assets/left-arrow_v1.png';
+import left2 from '../assets/left-bold.png';
 
 import insta from '../assets/instagram-svgrepo-com.svg';
 import whatsapp from '../assets/whatsapp-svgrepo-com.svg';
@@ -32,19 +34,19 @@ const Animation = () => {
 
   const detailedList = [
     {
-      count: '1.',
-      info: t('animaton_list_info1'),
-      text: t('animation_list_text1'),
+      count: ' .1',
+      info: 'הסבירו בצורה פשוטה וברורה',
+      text: 'אתם שולחים לנו חומרים על הפרויקט (תכניות קומה , תוכניות חזית וגינון). אנו עובדים ומגבשים הצעת מחיר מסחרית .',
     },
     {
-      count: '2.',
-      info: t('animaton_list_info2'),
-      text: t('animation_list_text2'),
+      count: ' .2',
+      info: 'להחליף צילומים יקרים',
+      text: 'לפי העלילה בסרטון, רקטה אמורה להמריא או שהפעולה מתרחשתעל אי בודד? עבור צילום וידאו כזה, תצטרך להשתמש ב-chroma key וסטודיו יקר או לקנות כרטיסי טיסה כדי להגיע למקום המתאים לזה. אבל אתה יכול לצייר כל מה שאתה רוצה גם אי וגם רקטה.',
     },
     {
-      count: '3.',
-      info: t('animaton_list_info3'),
-      text: t('animation_list_text3'),
+      count: ' .3',
+      info: 'להיראות מודרני',
+      text: 'מעטות החברות שמנצלות את כל האפשרויות של סרטוני אנימציה. אבל מי שמצליח, עושה פרויקטים ממש מגניבים ובולט מהמתחרים.',
     },
   ];
 
@@ -65,25 +67,25 @@ const Animation = () => {
   const animateTypes = [
     {
       picture: anim_1,
-      header: t('animaton_type_header1'),
-      text: t('animaton_type_text1'),
+      header: 'הסבר על המוצר',
+      text: 'סרטון שמספר על עקרונות המוצר או השירות ב 1-1.5 דקות',
     },
     {
       picture: anim_2,
-      header: t('animaton_type_header2'),
-      text: t('animaton_type_text2'),
+      header: 'pre-roll פרסום',
+      text: 'סרטון קצר עם קריאה לפעולה, המשמש בקמפיינים פרסומיים.',
     },
-    { picture: anim_3, header: t('animaton_type_header3'), text: t('animaton_type_text3') },
+    { picture: anim_3, header: 'סרטון ותמונה', text: 'כל סיפור של המותג אפשר לספר בצורה מעניינת באמצעות אנימציה.' },
     {
       picture: anim_4,
-      header: t('animaton_type_header4'),
-      text: t('animaton_type_text4'),
+      header: 'תסריט חינוכי',
+      text: 'אנימציה חזותית של ממשקי אתרים ואפליקציות לחינוך הצופה.',
     },
   ];
 
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.title}>{t('animation_header')}</h1>
+      <h1 className={styles.title}>אנימציה</h1>
       <div className={styles.service}>
         <span>{t('servPage_service')}</span>
         <div className={styles.dots_wrapper}>
@@ -106,20 +108,20 @@ const Animation = () => {
       <hr />
       <section className={styles.info}>
         <article className={styles.info_left}>
-          <h4>{t('animation_subheader1')}</h4>
-          <p>{t('animation_text1')}</p>
+          <h4>אנו פותרים בעיות עסקיות יצירתיות באמצעות אנימציה</h4>
+          <p>אנו נספר בפשטות ובבירור על המוצר שלך באמצעות אנימציה, ניצור תמונות ויזואליות שייזכרו על ידי הצופה.</p>
         </article>
         <aside className={styles.info_right}>
           <div>
-            <a href="#">{t('servPage_arrow')}</a>
-            <img src={arrow} alt="arrow" />
+            <a href="#"> תשאיר את הבקשה שלך</a>
+            <img src={left2} alt="arrow" />
           </div>
-          <p>{t('servPage_arrText')}</p>
+          <p>יעוץ חינם ונראה לך היכן להתחיל</p>
         </aside>
       </section>
       {/* <article className={styles.article}>{secondText}</article> */}
       <section className={styles.works}>
-        <h2>{t('animation_subheader2')}</h2>
+        <h2>סרטוני אנימציה עוזרים לספר דברים קשים בצורה פשוטה</h2>
 
         {/* подробный stagesList*/}
         {detailedList.length > 0 && (
@@ -127,7 +129,9 @@ const Animation = () => {
             <ol className={styles.detailList}>
               {detailedList.map((item) => (
                 <li className={styles.detailList_item}>
-                  <span>{item.count}</span> {item.info}
+                  <div>
+                    <span> {item.info} </span> {item.count}
+                  </div>
                   {item.image !== undefined && <img src={item.image} className={styles.icons3d} alt="icon" />}
                   <hr />
                   <article>{item.text}</article>
@@ -137,12 +141,15 @@ const Animation = () => {
           </>
         )}
 
-        <h2>{t('animation_subheader3')}</h2>
+        <h2>4 סוגים עיקריים של סרטוני אנימציה</h2>
+        <h3 className={styles.extraHeader}>
+          אנו מדגישים מספר פורמטים טיפוסיים לשימוש באנימציה דו-ממדית ותלת-ממדית, ניתן להשתמש בהם גם במצבים אחרים.
+        </h3>
         <div className={styles.typesWrapper}>
           {animateTypes.map((item, i) => (
             <div key={i} className={styles.types}>
               <img src={item.picture} alt="picture" />
-              <div>
+              <div className={styles.typesInside}>
                 <h5>{item.header}</h5>
                 <p>{item.text}</p>
               </div>
@@ -150,7 +157,7 @@ const Animation = () => {
           ))}
         </div>
 
-        <h3 className={styles.workSubtitle}>{t('servPage_examples')}</h3>
+        <h3 className={styles.workSubtitle}>לדוגמא</h3>
         {/* а это динамическая карусель */}
         {TopImages.length > 0 && BottomImages.length > 0 && (
           <div className={styles.carouselBigWrapper}>

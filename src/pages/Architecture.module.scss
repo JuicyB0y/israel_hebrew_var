@@ -7,7 +7,7 @@
   margin-left: -50px;
   margin-top: -15px;
   margin-right: -50px;
-  border-radius: 50px 0 0 0;
+  border-radius: 0 50px 0 0;
   overflow: hidden;
   img {
     width: 100%;
@@ -21,6 +21,8 @@
     color: #fff;
     font-size: 80px;
     width: 90%;
+    text-align: right;
+    direction: rtl;
   }
 }
 
@@ -30,16 +32,19 @@
   height: calc(100% + 100px);
   //   overflow: hidden;
   h3 {
-    margin-top: 50px;
+    margin: 50px 0 0 auto;
     font-size: 40px;
+    text-align: right;
   }
 
   article {
-    margin-top: 30px;
+    margin: 30px 0 0 auto;
     font-size: 24px;
     font-weight: 400;
     line-height: 1.7rem;
     max-width: 1000px;
+    text-align: right;
+    direction: rtl;
   }
 }
 
@@ -47,6 +52,9 @@
   margin-top: 70px;
   display: flex;
   justify-content: space-between;
+  max-width: 2025px;
+  margin-left: auto;
+  margin-right: auto;
 
   img {
     width: 47%;
@@ -54,8 +62,12 @@
 }
 
 .bigImgConcept {
+  display: flex;
   margin-top: 50px;
   width: 100%;
+  max-width: 2025px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // .bigImgWrapper {
@@ -69,6 +81,9 @@
   justify-content: flex-start;
   width: 100%;
   //   height: 850px;
+  max-width: 2325px;
+  margin-left: auto;
+  margin-right: auto;
 
   .black {
     display: none;
@@ -99,6 +114,7 @@
 .form {
   display: flex;
   margin-top: 50px;
+  flex-direction: row-reverse;
 }
 
 @media screen and (max-width: 1300px) {
@@ -139,7 +155,7 @@
 @media screen and (max-width: 800px) {
   .image {
     h1 {
-      width: 85%;
+      width: 82%;
       font-size: 45px;
     }
   }
@@ -169,7 +185,7 @@
 @media screen and (max-width: 576px) {
   .image {
     h1 {
-      width: 84%;
+      width: 78%;
       font-size: 36px;
     }
   }

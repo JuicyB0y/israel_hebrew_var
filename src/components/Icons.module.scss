@@ -1,8 +1,14 @@
+.mainWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
 .iconsWrapper {
   position: fixed;
   display: flex;
+  // margin-left: 98vw;
   flex-direction: column;
-  margin-left: 5px;
   margin-top: 20px;
   gap: 10px;
 }

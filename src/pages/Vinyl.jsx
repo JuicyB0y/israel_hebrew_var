@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 import Contacts from '../components/Contacts';
 import Form from '../components/Form';
@@ -22,22 +22,22 @@ import vinyl_min2 from '../assets/vinyl_mini2.png';
 import vinyl_min3 from '../assets/vinyl_mini3.png';
 
 const Vinyl = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <div className={styles.wrapper}>
       <section className={styles.topSection}>
         <div className={styles.image}>
           <img src={headerImg} alt="bgImage" /* className={styles.image} */ />
-          <h1>{t('vinyl_header')}</h1>
+          <h1>איורים לתקליטי ויניל</h1>
         </div>
       </section>
       <section className={styles.description}>
-        <h3>{t('sturm_subtitle')}</h3>
+        <h3>משימה</h3>
         <article>
-          <p>{t('vinyl_text1')}</p>
+          <p>לפתח שלוש עטיפות לתקליט ויניל בסגנון נתון.</p>
           <br />
-          <p>{t('vinyl_text2')}</p>
+          <p>הלקוח שלח תמונות של מה שהוא אוהב וזו התוצאה.</p>
         </article>
         {/* <div className={styles.topImgWrapper}>
           <div className={styles.imageLittle}>
@@ -49,7 +49,7 @@ const Vinyl = () => {
             <p>Guernica, 1937</p>
           </div>
         </div> */}
-        <h3>{t('servPage_result')}</h3>
+        <h3>תוצאה</h3>
 
         <div className={styles.botImage}>
           <img src={big} alt="image" />

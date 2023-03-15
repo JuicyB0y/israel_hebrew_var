@@ -21,7 +21,7 @@ const Exterior = () => {
       <section className={styles.topSection}>
         <div className={styles.image}>
           <img src={headerImg} alt="bgImage" /* className={styles.image} */ />
-          <h1>{t('ext_header')}</h1>
+          <h1>מראה חיצוני של בית פרטי</h1>
         </div>
         <div className={styles.article}>
           <div className={styles.icons}>
@@ -38,11 +38,14 @@ const Exterior = () => {
         </div>
       </section>
       <section className={styles.description}>
-        <h3>{t('sturm_subtitle')}</h3>
-        <article>{t('ext_text')}</article>
+        <h3>משימה</h3>
+        <article>
+          מטרת הפרויקט זה הייתה ליצור בית ייחודי לשימוש נוסף כהשכרה יומית לכל ימות השנה. הבית מיועד לזוגות ולקבוצות
+          קטנות.
+        </article>
         <div className={styles.taskImg_wrapper}>
           <img src={taskImg} alt="graffiti" />
-          <h2>{t('ext_imgText')}</h2>
+          <h2>עוד בנושא</h2>
         </div>
       </section>
       <section className={styles.imgExamples}>
